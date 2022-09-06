@@ -2,17 +2,25 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { useRouter } from 'next/router';
+import Lottie from 'react-lottie';
+import animationData from '../svg/QI_logo_ani_SVG(1280*800).json';
+
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 import styles from '../styles/Home.module.css';
 
 const Homepage = () => {
-	const router = useRouter();
 	const { t } = useTranslation('common');
 
-	const changeTo = router.locale === 'en' ? 'ko' : 'en';
+	const defaultOptions = {
+		loop: true,
+		autoplay: true,
+		animationData: animationData,
+		rendererSettings: {
+			preserveAspectRatio: 'xMidYMid slice',
+		},
+	};
 
 	return (
 		<div>
@@ -24,9 +32,7 @@ const Homepage = () => {
 			</Head>
 			<h1>{t('test')}</h1>
 
-			<Link href="/" locale={changeTo}>
-				<a>{t('change-locale', { changeTo })}</a>
-			</Link>
+			<Lottie options={defaultOptions} height={800} width={1280} />
 		</div>
 	);
 };
