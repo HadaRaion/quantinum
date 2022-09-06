@@ -1,0 +1,5 @@
+{
+	"description": "한글카피라이트",
+	"change-locale": "Change locale to \"{{changeTo}}\"",
+	"test": "테스트입니당"
+}
