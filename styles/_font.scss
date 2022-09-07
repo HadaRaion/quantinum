@@ -1,0 +1,55 @@
+.en {
+	font-family: 'Chakra Petch', sans-serif;
+}
+
+h1 {
+	font-size: 68px;
+	&.ko {
+		font-size: 64px;
+	}
+}
+
+h2 {
+	font-size: 52px;
+	@include atMedium {
+		font-size: 24px;
+	}
+	&.ko {
+		font-size: 48px;
+	}
+}
+
+h3 {
+	font-size: 36px;
+	&.ko {
+		font-size: 36px;
+	}
+}
+
+h4 {
+	font-size: 26px;
+	&.ko {
+		font-size: 24px;
+	}
+}
+
+h5 {
+	font-size: 22px;
+	&.ko {
+		font-size: 20px;
+	}
+}
+
+h6 {
+	font-size: 18px;
+	&.ko {
+		font-size: 16px;
+	}
+}
+
+p {
+	font-size: 18px;
+	@include atMedium {
+		font-size: 12px;
+	}
+}

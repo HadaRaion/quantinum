@@ -1,20 +1,23 @@
+// styles
+import styles from '../styles/Header.module.scss';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 import { useTranslation, i18n } from 'next-i18next';
 
-const Navbar = () => {
+const Header = () => {
 	const router = useRouter();
 	const { t } = useTranslation('common');
 	const changeTo = router.locale === 'en' ? 'ko' : 'en';
 
 	return (
-		<header className="site-header">
+		<header className={styles['site-header']}>
 			<div className="container">
 				<nav>
 					<div className="logo">
-						{/* <Image src="/logo.png" alt="site logo" width={128} height={77} /> */}
+						<Image src="/logo.svg" alt="site logo" width={131} height={39} />
 					</div>
 					<ul>
 						<li>
@@ -57,4 +60,4 @@ const Navbar = () => {
 	);
 };
 
-export default Navbar;
+export default Header;
