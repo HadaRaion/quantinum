@@ -1,5 +1,6 @@
 import Layout from '../components/Layout';
 import { appWithTranslation } from 'next-i18next';
+
 import '../styles/index.scss';
 
 function MyApp({ Component, pageProps }) {

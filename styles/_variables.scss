@@ -2,35 +2,4 @@ $black: #231f20;
 $primary: #8c9091;
 $secondary: #a7a8a9;
 $lightGray: #e0e0e0;
-
-// $gradient: linear-gradient(to right, #05c399, #5e90eb);
-
-// :root {
-// 	--header-height: 100px;
-// 	--layout-max-width: 1310px;
-// 	--layout-margin: 3rem;
-// }
-
-// @include atLarge {
-// 	:root {
-// 		--header-height: 100px;
-// 	}
-// }
-
-// @include atMedium {
-// 	:root {
-// 		--header-height: 80px;
-// 		--layout-margin: 3rem;
-// 	}
-// }
-
-// @include atSmall {
-// 	:root {
-// 		--header-height: 60px;
-// 		--layout-margin: 2rem;
-// 	}
-
-// 	.line-break {
-// 		display: block;
-// 	}
-// }
+$header-height: 80px;

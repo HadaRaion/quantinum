@@ -41,3 +41,43 @@
 		z-index: -1;
 	}
 }
+
+:root {
+	--layout-max-width: 1400px;
+	--layout-margin: 0rem;
+}
+
+@include atLarge {
+	:root {
+		--layout-margin: 1rem;
+	}
+}
+
+@include atMedium {
+	:root {
+		--layout-margin: 3rem;
+	}
+}
+
+@include atSmall {
+	:root {
+		--layout-margin: 2rem;
+	}
+
+	.line-break {
+		display: block;
+	}
+}
+
+.container {
+	width: 100%;
+	max-width: var(--layout-max-width);
+	padding-left: var(--layout-margin);
+	padding-right: var(--layout-margin);
+	margin-left: auto;
+	margin-right: auto;
+
+	@include atMedium {
+		// background-color: #fff;
+	}
+}

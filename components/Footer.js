@@ -1,11 +1,13 @@
-import { useTranslation, Trans } from 'next-i18next';
+//styles
+import styles from '../styles/Footer.module.scss';
 
 const Footer = props => {
-	const { t } = useTranslation('common');
-
 	return (
-		<footer>
-			<p> {t('description')} </p>
+		<footer className={styles.footer}>
+			<p>
+				<span className="line-break">© Copyright 2022. </span>
+				All Rights Reserved by Quantinum investment.
+			</p>
 		</footer>
 	);
 };
