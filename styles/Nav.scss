@@ -1,13 +1,15 @@
+.white {
+	background-color: black;
+	li {
+		color: $black;
+	}
+}
+
 .nav {
 	display: flex;
 
-	&.white li {
-		color: $black;
-
-		&::before,
-		&::after {
-			background-color: $black;
-		}
+	&.white {
+		background-color: aqua;
 	}
 
 	li {
@@ -15,37 +17,31 @@
 		font-family: 'Chakra Petch', sans-serif;
 		font-weight: 600;
 		font-size: 17px;
+
 		text-transform: capitalize;
 		display: flex;
 		align-items: center;
 		height: 34px;
 		position: relative;
-		margin-left: 3rem;
 
 		&::before,
 		&::after {
-			content: '';
 			position: relative;
 			display: inline-block;
 			width: 12px;
 			height: 34px;
 			opacity: 0;
 			transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
-			-webkit-mask-size: cover;
-			mask-size: cover;
-			background-color: #fff;
 		}
 
 		&::before {
-			-webkit-mask: url('../public/bracket-left.svg') no-repeat 50% 50%;
-			mask: url('../public/bracket-left.svg') no-repeat 50% 50%;
+			content: url('../public/bracket-left.svg');
 			margin-right: 9px;
 			left: 15px;
 		}
 
 		&::after {
-			-webkit-mask: url('../public/bracket-right.svg') no-repeat 50% 50%;
-			mask: url('../public/bracket-right.svg') no-repeat 50% 50%;
+			content: url('../public/bracket-right.svg');
 			margin-left: 8px;
 			right: 15px;
 		}

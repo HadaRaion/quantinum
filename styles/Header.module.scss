@@ -12,6 +12,14 @@ $header-height: 80px;
 		background-color: #fff;
 	}
 
+	&.white {
+		background-color: #fff;
+
+		.logo {
+			color: $black;
+		}
+	}
+
 	.logo {
 		color: #fff;
 		width: 131px;

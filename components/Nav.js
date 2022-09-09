@@ -4,12 +4,12 @@ import { useRouter } from 'next/router';
 // styles
 import styles from '../styles/Nav.module.scss';
 
-const Nav = () => {
+const Nav = ({ whiteMenu }) => {
 	const router = useRouter();
 	const changeTo = router.locale === 'en' ? 'ko' : 'en';
 
 	return (
-		<ul className={styles.nav}>
+		<ul className={`${styles.nav} ${whiteMenu ? styles.white : ''}`}>
 			<li>
 				<Link href="/about">
 					<a>About</a>

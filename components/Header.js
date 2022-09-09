@@ -9,16 +9,16 @@ import styles from '../styles/Header.module.scss';
 import Image from 'next/image';
 import { useEffect } from 'react';
 
-const Header = ({ menuState, setMenuState, showOnMobile }) => {
+const Header = ({ menuState, setMenuState, showOnMobile, whiteMenu }) => {
 	const location = useRouter();
 
 	useEffect(() => {
 		setMenuState(false);
-		console.log(menuState);
+		// console.log(menuState);
 	}, [location]);
 
 	return (
-		<header className={styles['site-header']}>
+		<header className={`${styles['site-header']} ${whiteMenu ? styles.white : ''}`}>
 			<div className="container">
 				<nav className={styles.navbar}>
 					<Link href="/">
@@ -216,7 +216,7 @@ const Header = ({ menuState, setMenuState, showOnMobile }) => {
 						</div>
 					</Link>
 
-					{showOnMobile ? null : <Nav />}
+					{showOnMobile ? null : <Nav whiteMenu={whiteMenu} />}
 
 					<div className={styles.hamburger} onClick={() => setMenuState(!menuState)}>
 						<div className={styles['hamburger-icon']}></div>
