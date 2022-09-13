@@ -1,12 +1,11 @@
 .footer {
-	height: 80px;
+	height: $header-height;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	border-top: 1px solid $black;
 
 	p {
-		font-size: 14px;
 		text-align: center;
-		line-height: 1.6;
 	}
 }

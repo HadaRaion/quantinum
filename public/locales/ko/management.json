@@ -1,0 +1,38 @@
+{
+	"management": [
+		{
+			"id": 1,
+			"title": "대표이사",
+			"name": "강승희",
+			"career": [
+				"퀀티넘인베스트먼트 대표이사 (현)",
+				"아너스자산운용 대표이사 (전)",
+				"ING Bank N.V. 금융시장부 (전)",
+				"HSBC Global Banking 한국대기업팀 (전)"
+			],
+			"degree": "뉴욕대학교 경영학과 학사 (Leonard N. Stern School of Business)"
+		},
+		{
+			"id": 2,
+			"title": "의장",
+			"name": "윤근병",
+			"career": [
+				"서울기업금융 대표이사 (현)",
+				"랜드캐시 대표이사 (전)",
+				"더블유파이낸셜 대표이사 (전)"
+			]
+		},
+		{
+			"id": 3,
+			"title": "사외이사",
+			"name": "김한수",
+			"career": [
+				"위메이드 고문 (현)",
+				"오비트파트너스 대표이사(전)",
+				"글로멕스 대표이사(전)",
+				"청와대 선임행정관 (전)"
+			],
+			"degree": "오클랜드공과대학 경영학 졸업 (Auckland Technology of University)"
+		}
+	]
+}

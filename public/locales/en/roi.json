@@ -1,0 +1,154 @@
+{
+	"banner-title": "Status of ROI",
+	"thead": ["Product", "Total", "Start", "Period", "Period ROI", "Annual ROI", "Remarks"],
+	"fixed-period": {
+		"roi-title": "Fixed-Period ROI",
+		"annual-title": "Annual ROI",
+		"roi": 56.8,
+		"annual": 125.0,
+		"note": "(categories invested and profit-realized as of December 2021)",
+		"equity-capital-data": [
+			{
+				"product": "ESOP",
+				"total": 2.5,
+				"start": 20.11,
+				"period": "12 months",
+				"period-roi": "237.0%",
+				"annual-roi": "237.0%",
+				"remarks": "As an investment made in the forfeited employee shares, invested at KRW 135,000 per share; after lock-up was lifted, the shares were sold at KRW 320,000 for profit realization"
+			},
+			{
+				"product": "Association investment",
+				"total": 10,
+				"start": 21.03,
+				"period": "6 months",
+				"period-roi": "84.9%",
+				"annual-roi": "169.8%",
+				"remarks": "Investment made after examining the profitability and executive members during review of content-related investment"
+			},
+			{
+				"product": "CB",
+				"total": 80,
+				"start": 21.08,
+				"period": "3 months",
+				"period-roi": "60.0%",
+				"annual-roi": "240.0%",
+				"remarks": "CB investment with short maturity and lower conversion price than the current stock price, during review of investment related to secondary batteries"
+			},
+			{
+				"product": "CB",
+				"total": 30,
+				"start": 21.03,
+				"period": "6 months",
+				"period-roi": "320.0%",
+				"annual-roi": "640%",
+				"remarks": "CB investment during review of coronavirus-related beneficiaries"
+			},
+			{
+				"product": "Loan",
+				"total": 45,
+				"start": 21.02,
+				"period": "6 months",
+				"period-roi": "12.0%",
+				"annual-roi": "24.0%",
+				"remarks": "Investment made with collateral rate maintained at 200%, upon judgment of high safety"
+			},
+			{
+				"product": "Arbitrate trading",
+				"total": 10,
+				"start": 21.05,
+				"period": "5 months",
+				"period-roi": "10.0%",
+				"annual-roi": "24.0%",
+				"remarks": "Investment decided after a meeting held with the executive members during review of content-related investment"
+			}
+		],
+
+		"real-estate-data": [
+			{
+				"product": "Bridge Equity",
+				"total": 5,
+				"start": 21.06,
+				"period": "3 months",
+				"period-roi": "30.0%",
+				"annual-roi": "120.0%",
+				"remarks": "With excellent location for business, the leading construction company Hyundai Development joined"
+			}
+		]
+	},
+	"est-period": {
+		"roi-title": "Estimated-Period ROI",
+		"annual-title": "Annual ROI",
+		"roi": 481.6,
+		"annual": 306.8,
+		"note": "(categories to be invested and profit-realized between 2022 and December 2025)",
+		"equity-capital-data": [
+			{
+				"product": "Pre-IPO",
+				"total": 4.5,
+				"start": 21.11,
+				"period": "6 months",
+				"period-roi": "220.0%",
+				"annual-roi": "440.0%",
+				"remarks": "IPO expected in January; coronavirus treatment and 3-phase hepatitis treatment highly likely to be developed"
+			}
+		],
+
+		"real-estate-data": [
+			{
+				"product": "Bridge Equity",
+				"total": 35,
+				"start": 21.04,
+				"period": "12 months",
+				"period-roi": "50.0%",
+				"annual-roi": "50.0%",
+				"remarks": "KB Securities and Kiwoom Securities invested in the same tranche"
+			},
+			{
+				"product": "Lower priority",
+				"total": 30,
+				"start": 21.06,
+				"period": "6 months",
+				"period-roi": "33.0%",
+				"annual-roi": "49.5%",
+				"remarks": "Located within an industrial complex, licensing-related risks are low and demand for logistics centers is high"
+			},
+			{
+				"product": "Bridge Equity",
+				"total": 7,
+				"start": 21.06,
+				"period": "16 months",
+				"period-roi": "50.0%",
+				"annual-roi": "37.5%",
+				"remarks": "1) The principal sum is to be recovered 4 months after investment. 2) The developer is currently working on 2 development projects in the main area of Pohang; the profits from this investment to be secured as profits for execution in other business sites"
+			},
+			{
+				"product": "Equity",
+				"total": 15,
+				"start": 21.12,
+				"period": "48 months",
+				"period-roi": "150.0%",
+				"annual-roi": "37.5%",
+				"remarks": "The business site is 3-minute walk from Yeonsan Station; other than this project, the developer is working on 2 development projects in Busan (with joint guarantee by the CEO, profits from other business sites may be secured for this investment)"
+			},
+			{
+				"product": "Direct execution",
+				"total": 9,
+				"start": 21.11,
+				"period": "30 months",
+				"period-roi": "1666.7%",
+				"annual-roi": "666.7%",
+				"remarks": "A joint project of land owner; the initial equity burden is low, and risks associated with sale in lots are low due to convenient location"
+			},
+			{
+				"product": "Bridge Equity",
+				"total": 30,
+				"start": 21.12,
+				"period": "10 months",
+				"period-roi": "50.0%",
+				"annual-roi": "60.0%",
+				"remarks": "Investment made as it is conveniently located, and risks were judged to be low in consideration of bridge loan commitment and PF progress"
+			}
+		]
+	}
+}

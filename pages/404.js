@@ -5,19 +5,8 @@ import React, { useEffect } from 'react';
 const NotFound = props => {
 	const router = useRouter();
 
-	// function setScreenSize() {
-	// 	let vh = window.innerHeight * 0.01;
-
-	// 	document.documentElement.style.setProperty('--vh', `${vh}px`);
-	// }
-
-	// setScreenSize();
-
-	// window.addEventListener('resize', () => setScreenSize());
-	// window.addEventListener('touchend', () => setScreenSize());
 	useEffect(() => {
 		setTimeout(() => {
-			// router.back();
 			router.push('/');
 		}, 3000);
 	}, []);

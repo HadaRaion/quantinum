@@ -1,23 +1,17 @@
 @mixin atSmall {
-	@media (max-width: 640px) {
+	@media (max-width: 480px) {
 		@content;
 	}
 }
 
 @mixin atMedium {
-	@media (max-width: 769px) {
+	@media (max-width: 900px) {
 		@content;
 	}
 }
 
 @mixin atLarge {
-	@media (max-width: 1200px) {
-		@content;
-	}
-}
-
-@mixin atXlarge {
-	@media (max-width: 1600px) {
+	@media (max-width: 1440px) {
 		@content;
 	}
 }

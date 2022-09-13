@@ -1,0 +1,38 @@
+{
+	"management": [
+		{
+			"id": 1,
+			"title": "CEO",
+			"name": "Sunghee Kang",
+			"career": [
+				"Quantinum investment, CEO (Currently)",
+				"Honors Asset Management, CEO (Formerly)",
+				"ING Bank N.V., Financial Market Division (Formerly)",
+				"HSBC Global Banking, Korean Corporate Business Team (Formerly)"
+			],
+			"degree": "New York University, B.A · Business Administration (Leonard N. Stern School of Business)"
+		},
+		{
+			"id": 2,
+			"title": "Managing Director",
+			"name": "Geunbyung Yun",
+			"career": [
+				"Seoul Corporate Finance Service, CEO (Currently)",
+				"Land Cash, CEO (Formerly)",
+				"W Financial, CEO (Formerly)"
+			]
+		},
+		{
+			"id": 3,
+			"title": "Non-executive Director",
+			"name": "Hansoo Kim",
+			"career": [
+				"WEMADE Adviser (Currently)",
+				"Orbit Partners, CEO (Formerly)",
+				"Glomex, CEO (Formerly)",
+				"Executive Administrator, Cheong Wa Dae (Formerly)"
+			],
+			"degree": "Auckland Technology of University, B.A · Business Administration"
+		}
+	]
+}

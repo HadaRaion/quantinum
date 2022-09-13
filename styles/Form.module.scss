@@ -1,0 +1,57 @@
+.form {
+	label {
+		display: flex;
+		margin: 0 0 48px;
+		width: 100%;
+		@include atSmall {
+			flex-direction: column;
+		}
+	}
+
+	.input-label {
+		line-height: 24px;
+		padding: 11px 0;
+		position: absolute;
+		width: 120px;
+		z-index: 1;
+
+		@include atSmall {
+			padding: 0;
+			position: relative;
+			width: 100%;
+		}
+	}
+
+	.input-wrapper {
+		position: relative;
+		width: 100%;
+	}
+
+	input:not([type='submit']),
+	textarea {
+		display: inline-block;
+		position: relative;
+		width: 100%;
+		margin: 0;
+		color: $black;
+
+		font-size: 17px;
+		font-weight: 600;
+		letter-spacing: -0.01em;
+		line-height: 24px;
+		border: none;
+
+		border-bottom-color: $black;
+		border-bottom-style: solid;
+		border-bottom-width: 1px;
+		padding: 11px 0 11px 120px;
+		-webkit-appearance: none;
+		appearance: none;
+
+		@include atSmall {
+			padding-left: 0;
+			position: relative;
+			width: 100%;
+		}
+	}
+}

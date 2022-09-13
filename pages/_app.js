@@ -1,5 +1,6 @@
-import Layout from '../components/Layout';
 import { appWithTranslation } from 'next-i18next';
+
+import Layout from '../components/Layout';
 
 import '../styles/index.scss';
 

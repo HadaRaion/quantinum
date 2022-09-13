@@ -1,0 +1,254 @@
+.roi {
+	&.en .summary {
+		flex-wrap: wrap;
+
+		.rate {
+			margin-bottom: 20px;
+
+			.label {
+				font-size: 1.6rem;
+				font-weight: bold;
+				margin-right: 1rem;
+
+				@include atLarge {
+					font-size: 1.3rem;
+					margin-right: 1rem;
+				}
+
+				@include atSmall {
+					font-size: 1.125rem;
+				}
+			}
+		}
+
+		.note {
+			flex: 1 1 100%;
+			text-align: right;
+		}
+
+		@include atMedium {
+			.rate {
+				margin-bottom: 0px;
+			}
+
+			.note {
+				text-align: left;
+			}
+		}
+	}
+
+	.summary {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+
+		@include atMedium {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
+		.rate {
+			display: flex;
+			align-items: flex-end;
+
+			@include atMedium {
+				flex-direction: column;
+				align-items: flex-start;
+			}
+
+			.label {
+				font-size: 2rem;
+				color: $primary;
+				margin-right: 2rem;
+
+				@include atLarge {
+					font-size: 1.3rem;
+					margin-right: 1rem;
+				}
+
+				@include atSmall {
+					font-size: 1.125rem;
+				}
+			}
+
+			.value {
+				font-family: $font-family;
+				font-weight: 600;
+				font-size: 4.25rem;
+				line-height: 1;
+
+				@include atLarge {
+					font-size: 3.2rem;
+				}
+
+				@include atMedium {
+					margin-top: 5px;
+					margin-bottom: 2.5rem;
+				}
+			}
+		}
+
+		.note {
+			font-size: 1.1rem;
+			color: $primary;
+
+			@include atLarge {
+				font-size: 1rem;
+			}
+
+			@include atSmall {
+				font-size: 0.75rem;
+				color: $black;
+			}
+		}
+	}
+
+	.quote {
+		position: relative;
+		height: 700px;
+		display: flex;
+		align-items: center;
+
+		@include atSmall {
+			height: 570px;
+		}
+
+		&::after {
+			content: '';
+			display: block;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-color: $black;
+			opacity: 0.4;
+		}
+
+		.text {
+			color: #fff;
+			z-index: 2;
+
+			h5 {
+				font-weight: 400;
+				letter-spacing: 5px;
+				text-transform: uppercase;
+				margin-top: 50px;
+
+				@include atSmall {
+					font-size: 1rem;
+				}
+			}
+		}
+	}
+
+	table {
+		border-collapse: collapse;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		table-layout: fixed;
+		font-size: 1.125rem;
+		text-align: center;
+
+		caption {
+			font-family: $font-family;
+			font-weight: 600;
+			text-align: left;
+			position: relative;
+			margin: 150px 0 50px;
+
+			&::before {
+				content: '●';
+				font-size: 0.3rem;
+				margin-right: 10px;
+				position: relative;
+				bottom: 2px;
+			}
+		}
+
+		tr {
+			border-top: 1px solid $black;
+			border-bottom: 1px solid $black;
+		}
+
+		th,
+		td {
+			padding-bottom: 40px;
+			padding-top: 40px;
+		}
+
+		th:last-of-type {
+			width: 420px;
+			padding: 20px;
+		}
+
+		td:last-of-type {
+			padding-left: 20px;
+		}
+
+		th:first-of-type,
+		th:last-of-type,
+		td:first-of-type,
+		td:last-of-type {
+			text-align: left;
+		}
+
+		@include atMedium {
+			thead {
+				border: none;
+				clip: rect(0 0 0 0);
+				height: 1px;
+				margin: -1px;
+				overflow: hidden;
+				padding: 0;
+				position: absolute;
+				width: 1px;
+			}
+
+			tbody {
+				border-bottom: 1px solid $black;
+			}
+
+			tr {
+				display: block;
+				border-bottom: none;
+			}
+
+			td {
+				display: block;
+				border-bottom: 1px solid $lightGray;
+				font-size: 0.8em;
+				text-align: right;
+				display: flex;
+				justify-content: space-between;
+				position: relative;
+			}
+
+			button {
+				position: absolute;
+				right: 0;
+			}
+
+			td::before {
+				content: attr(data-label);
+				margin-right: 60px;
+			}
+
+			td:last-of-type {
+				border-bottom: none;
+				padding-left: 0px;
+			}
+
+			td:first-of-type {
+				border-bottom: 1px solid $black;
+				border-bottom: none;
+				padding-right: 34px;
+			}
+
+			td:nth-of-type(2) {
+				border-top: 1px solid $black;
+			}
+		}
+	}
+}

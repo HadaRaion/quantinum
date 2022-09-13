@@ -14,7 +14,7 @@ import MobileNav from './MobileNav';
 import styles from '../styles/Layout.module.scss';
 
 const Layout = ({ children }) => {
-	const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+	const isMobile = useMediaQuery({ query: '(max-width: 901px)' });
 	const [showOnMobile, setShowOnMobile] = useState(false);
 	const [menuState, setMenuState] = useState(false);
 

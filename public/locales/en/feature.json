@@ -1,0 +1,49 @@
+{
+	"capital-market-subtitle1": "Because the capital market rapidly changes and does not promise fixed returns, ",
+	"capital-market-subtitle2": "",
+	"capital-market-subtitle3": "we aim for limited financing based on our power of information",
+	"capital-market-features": [
+		{
+			"id": 1,
+			"title": "Proactively reflect market trends",
+			"cons": "Information is power in this market, which changes rapidly and proactively reflects trends",
+			"pros": "Focus resources only on necessary points through meetings and exchanges with leaders participating in the market"
+		},
+		{
+			"id": 2,
+			"title": "Fluctuation",
+			"cons": "Great fluctuation due to macro-, micro- and social factors of the market",
+			"pros": "Prepare for fluctuation through short-term operation of products ensuring capital preservation such as CB, BW, etc."
+		},
+		{
+			"id": 3,
+			"title": "Profitability",
+			"cons": "High profits at close range if investment based on accurate analysis line up with market trends and directions",
+			"pros": "Quality of profit increased through systematic/non-systematic risk control and short-term fund operation"
+		}
+	],
+
+	"real-estate-subtitle1": "We develop stable and highly profitable products ",
+	"real-estate-subtitle2": "while maximizing the advantages of real estate financing ",
+	"real-estate-subtitle3": "and improving on their shortcomings.",
+	"real-estate-features": [
+		{
+			"id": 4,
+			"title": "Uniqueness & individuality",
+			"cons": "Real estate PF has uniqueness and individuality as all its projects are different form each other",
+			"pros": "Investment structure standardized based on the accumulated know-hows and experiences"
+		},
+		{
+			"id": 5,
+			"title": "Liquidity",
+			"cons": "In general, the period of real estate PF investment is 2-5 years; it is vulnerable in terms of financing liquidity",
+			"pros": "Investment made by setting the period of investment at around a year, based on deep understanding of the project"
+		},
+		{
+			"id": 6,
+			"title": "Profitability",
+			"cons": "The rate of return for real estate PF is higher, compare to that of other financial products",
+			"pros": "Higher rate of return on investment achieved through inside information and hegemony unknown to common investors"
+		}
+	]
+}

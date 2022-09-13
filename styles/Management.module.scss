@@ -1,0 +1,132 @@
+.management {
+	.member {
+		margin-top: 200px;
+		display: flex;
+
+		@include atMedium {
+			flex-direction: column;
+		}
+
+		.name {
+			width: 172px;
+			height: 83px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			text-align: center;
+			margin-right: 180px;
+
+			@include atMedium {
+				margin-bottom: 70px;
+			}
+
+			&::before,
+			&::after {
+				content: '';
+				position: relative;
+				display: block;
+				width: 30px;
+				height: 83px;
+				background-color: $primary;
+			}
+
+			&::before {
+				-webkit-mask: url('../public/bracket-left.svg') no-repeat;
+				mask: url('../public/bracket-left.svg') no-repeat;
+				-webkit-mask-size: contain;
+				mask-size: contain;
+			}
+
+			&::after {
+				-webkit-mask: url('../public/bracket-right.svg') no-repeat;
+				mask: url('../public/bracket-right.svg') no-repeat;
+				-webkit-mask-size: contain;
+				mask-size: contain;
+			}
+
+			p,
+			h4 {
+				line-height: 1;
+			}
+
+			h4 {
+				margin-top: 10px;
+			}
+		}
+
+		.profile {
+			flex: 1;
+			border-top: 1px solid $black;
+			border-bottom: 1px solid $black;
+
+			& > div {
+				display: flex;
+
+				@include atSmall {
+					flex-direction: column;
+				}
+			}
+
+			h5 {
+				width: 200px;
+				padding-top: 36px;
+
+				@include atMedium {
+					width: 150px;
+				}
+				@include atSmall {
+					border-bottom: 1px solid $lightGray;
+					width: 100%;
+					padding: 36px 0;
+				}
+			}
+
+			li {
+				padding: 40px 0;
+				flex: 1;
+			}
+
+			.career {
+				ol {
+					flex: 1;
+					li {
+						border-bottom: 1px solid $black;
+
+						&:last-child {
+							border-bottom: none;
+						}
+
+						@include atSmall {
+							border-bottom: 1px solid $lightGray;
+						}
+					}
+				}
+			}
+
+			.degree {
+				border-top: 1px solid $black;
+			}
+		}
+	}
+
+	&.english {
+		.name {
+			width: 280px;
+			height: 69px;
+			font-family: $font-family;
+
+			@include atLarge {
+				margin-right: 120px;
+			}
+			&::before,
+			&::after {
+				width: 25px;
+				height: 69px;
+			}
+
+			h4 {
+				margin-top: 4px;
+			}
+		}
+	}
+}

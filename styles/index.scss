@@ -2,6 +2,8 @@
 @import './mixins';
 @import './variables';
 @import './font';
+@import './spacing';
+@import './btn';
 
 :root {
 	--layout-max-width: 1400px;
@@ -10,7 +12,7 @@
 
 @include atLarge {
 	:root {
-		--layout-margin: 1rem;
+		--layout-margin: 3rem;
 	}
 }
 
@@ -25,9 +27,13 @@
 		--layout-margin: 2rem;
 	}
 
-	.line-break {
+	.break-line-mo {
 		display: block;
 	}
+}
+
+.break-line {
+	display: block;
 }
 
 .container {

@@ -13,6 +13,7 @@ html,
 body {
 	width: 100%;
 	font-family: 'NanumSquare', -apple-system, Segoe UI, Roboto, sans-serif;
+	line-height: 1.6;
 }
 
 ::selection {
@@ -61,18 +62,16 @@ input[type='tel'],
 input[type='url'],
 [type='textarea'],
 textarea {
+	vertical-align: top;
 	border-radius: 0;
 	-webkit-appearance: none;
 	outline: none;
+	background-color: transparent;
+	cursor: pointer;
 }
 
 input::-moz-focus-inner {
 	border: 0;
 	padding: 0;
 	margin: 0;
-}
-
-input[type='text'],
-input[type='password'] {
-	padding-left: 10px;
 }

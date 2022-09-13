@@ -4,6 +4,10 @@
 	position: relative;
 	overflow: hidden;
 
+	@include atSmall {
+		height: 570px;
+	}
+
 	&::after {
 		content: '';
 		display: block;
@@ -26,9 +30,31 @@
 		z-index: 1;
 		margin-top: 40px;
 
+		&.second {
+			margin-top: 0px;
+		}
+
+		h1 {
+			line-height: 1.4;
+		}
+
 		p {
 			font-size: 20px;
-			margin-top: 10px;
+			line-height: 1.6;
+
+			&:first-of-type {
+				margin-top: 6px;
+			}
+
+			@include atSmall {
+				font-size: 1rem;
+				display: inline-block;
+				float: left;
+
+				&:first-of-type {
+					margin-top: 30px;
+				}
+			}
 		}
 	}
 }

@@ -1,0 +1,154 @@
+{
+	"banner-title": "투자 수익 현황",
+	"thead": ["상품", "총규모", "투자시기", "투자기간", "기간수익률", "연간수익률", "Remarks"],
+	"fixed-period": {
+		"roi-title": "확정기간수익률",
+		"annual-title": "연간 수익률",
+		"roi": 56.8,
+		"annual": 125.0,
+		"note": "(2021년 12월 기준 투자 및 수익실현 완료 종목)",
+		"equity-capital-data": [
+			{
+				"product": "우리사주",
+				"total": 2.5,
+				"start": 20.11,
+				"period": "12개월",
+				"period-roi": "237.0%",
+				"annual-roi": "237.0%",
+				"remarks": "우리사주 실권주 투자로, 주당 135,000원에 투자하여 1년 락업해제 이후 320,000원에 매도 후 수익실현"
+			},
+			{
+				"product": "조합출자 ",
+				"total": 10,
+				"start": 21.03,
+				"period": "6개월",
+				"period-roi": "84.9%",
+				"annual-roi": "169.8%",
+				"remarks": "컨텐츠 관련 투자검토 중 사업성과 경영진들을 보고 투자"
+			},
+			{
+				"product": "CB",
+				"total": 80,
+				"start": 21.08,
+				"period": "3개월",
+				"period-roi": "60.0%",
+				"annual-roi": "240.0%",
+				"remarks": "2차전지 관련 투자 검토 중 만기가 얼마 남지 않고, 현 주가보다 전환가 낮은 CB 투자"
+			},
+			{
+				"product": "CB",
+				"total": 30,
+				"start": 21.03,
+				"period": "6개월",
+				"period-roi": "320.0%",
+				"annual-roi": "640%",
+				"remarks": "코로나 관련 수혜주 검토 중 CB 투자"
+			},
+			{
+				"product": "Loan",
+				"total": 45,
+				"start": 21.02,
+				"period": "6개월",
+				"period-roi": "12.0%",
+				"annual-roi": "24.0%",
+				"remarks": "담보비율 200% 유지하고, 안전성 높다 판단하여 투자"
+			},
+			{
+				"product": "차익거래",
+				"total": 10,
+				"start": 21.05,
+				"period": "5개월",
+				"period-roi": "10.0%",
+				"annual-roi": "24.0%",
+				"remarks": "컨텐츠 관련 투자검토 중 경영진과의 미팅을 통해 투자 결정"
+			}
+		],
+
+		"real-estate-data": [
+			{
+				"product": "Bridge Equity",
+				"total": 5,
+				"start": 21.06,
+				"period": "3개월",
+				"period-roi": "30.0%",
+				"annual-roi": "120.0%",
+				"remarks": "사업장 입지가 훌륭하여, 1군 시공사인 현대개발에서 참여"
+			}
+		]
+	},
+	"est-period": {
+		"roi-title": "예정기간수익률",
+		"annual-title": "연간 수익률",
+		"roi": 481.6,
+		"annual": 306.8,
+		"note": "(~2025년 12월 기준 투자 및 수익실현 완료 종목)",
+		"equity-capital-data": [
+			{
+				"product": "Pre-IPO",
+				"total": 4.5,
+				"start": 21.11,
+				"period": "6개월",
+				"period-roi": "220.0%",
+				"annual-roi": "440.0%",
+				"remarks": "1월 IPO예상, 코로나 치료제 3상 및 간염치료제 개발 가능성 높음"
+			}
+		],
+
+		"real-estate-data": [
+			{
+				"product": "Bridge Equity",
+				"total": 35,
+				"start": 21.04,
+				"period": "12개월",
+				"period-roi": "50.0%",
+				"annual-roi": "50.0%",
+				"remarks": "동일 트렌치 KB증권 및 키움증권 투자하였음"
+			},
+			{
+				"product": "후순위",
+				"total": 30,
+				"start": 21.06,
+				"period": "6개월",
+				"period-roi": "33.0%",
+				"annual-roi": "49.5%",
+				"remarks": "산업단지내 위치하여 인허가 리스크가 적고, 물류센터에 대한 수요가 높음"
+			},
+			{
+				"product": "Bridge Equity",
+				"total": 7,
+				"start": 21.06,
+				"period": "16개월",
+				"period-roi": "50.0%",
+				"annual-roi": "37.5%",
+				"remarks": "1) 원금회수는 투자시점으로 부터 4개월 뒤, 2) 시행사가 포항 요지에서 2건의 개발사업을 진행중에 있음, 본건 투자의 수익을 타사업장 시행이익으로 담보"
+			},
+			{
+				"product": "Equity",
+				"total": 15,
+				"start": 21.12,
+				"period": "48개월",
+				"period-roi": "150.0%",
+				"annual-roi": "37.5%",
+				"remarks": "사업지 연산역에서 도보 3분거리에 위치, 본건 외에 시행사가 부산내에서 2건의 개발사업을 진행중(대표이사 연대보증으로, 타 사업장 수익으로 본건 투자를 담보할 수 있음)"
+			},
+			{
+				"product": "직접시행",
+				"total": 9,
+				"start": 21.11,
+				"period": "30개월",
+				"period-roi": "1666.7%",
+				"annual-roi": "666.7%",
+				"remarks": "지주공동 사업으로 초기 에쿼티 부담이 적고, 입지가 좋아 분양에 대한 리스크가 낮음"
+			},
+			{
+				"product": "Bridge Equity",
+				"total": 30,
+				"start": 21.12,
+				"period": "10개월",
+				"period-roi": "50.0%",
+				"annual-roi": "60.0%",
+				"remarks": "입지가 좋고, Bridge 대출 확약과 PF 진행상황을 파악하여 리스크가 낮다고 판단하고 투자"
+			}
+		]
+	}
+}

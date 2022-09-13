@@ -1,0 +1,134 @@
+.feature {
+	&.english {
+		.title {
+			font-family: $font-family;
+			flex: 0 0 350px;
+			font-weight: 600;
+
+			@include atMedium {
+				flex: 1;
+			}
+		}
+		span {
+			@include atMedium {
+				display: inline;
+			}
+		}
+	}
+
+	ul {
+		margin-bottom: 10rem;
+		border-bottom: 1px solid $lightGray;
+
+		li {
+			display: flex;
+			padding: 80px 0;
+			border-top: 1px solid $lightGray;
+			font-size: 1.25rem;
+			align-items: center;
+
+			@include atMedium {
+				flex-direction: column;
+				padding: 50px 0 70px;
+				font-size: 1rem;
+			}
+
+			.title {
+				flex: 0 0 400px;
+				font-weight: 600;
+				display: flex;
+				align-items: center;
+
+				@include atLarge {
+					flex: 0 0 360px;
+				}
+
+				@include atMedium {
+					flex-direction: column;
+					flex: 1;
+					margin-bottom: 68px;
+				}
+
+				&::before {
+					content: '';
+					width: 60px;
+					height: 60px;
+					margin-right: 10px;
+					background-size: cover;
+					flex: 0 0 60px;
+
+					@include atMedium {
+						margin-right: 0px;
+					}
+				}
+			}
+
+			.arrow {
+				flex: 0 0 30px;
+				height: 30px;
+				border: solid $black;
+				border-width: 0 1px 1px 0;
+				padding: 10px;
+				transform: rotate(-45deg);
+				margin: 0 8rem;
+
+				@include atLarge {
+					margin: 0 5rem;
+				}
+
+				@include atMedium {
+					padding: 15px;
+					border: solid $primary;
+					border-width: 0 1px 1px 0;
+					transform: rotate(45deg);
+					margin: 4rem 0;
+				}
+			}
+
+			.cons,
+			.pros {
+				flex: 1;
+			}
+		}
+	}
+
+	.capital-market-features li {
+		&:nth-child(1) {
+			.title::before {
+				background-image: url('../public/icon-arrow-up.svg');
+			}
+		}
+
+		&:nth-child(2) {
+			.title::before {
+				background-image: url('../public/icon-clock.svg');
+			}
+		}
+
+		&:nth-child(3) {
+			.title::before {
+				background-image: url('../public/icon-money.svg');
+			}
+		}
+	}
+
+	.real-estate-features li {
+		&:nth-child(1) {
+			.title::before {
+				background-image: url('../public/icon-unique.svg');
+			}
+		}
+
+		&:nth-child(2) {
+			.title::before {
+				background-image: url('../public/icon-cal.svg');
+			}
+		}
+
+		&:nth-child(3) {
+			.title::before {
+				background-image: url('../public/icon-arrow-up.svg');
+			}
+		}
+	}
+}
