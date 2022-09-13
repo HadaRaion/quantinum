@@ -12,7 +12,7 @@ import Form from '../components/Form';
 import styles from '../styles/Contact.module.scss';
 
 const Contact = props => {
-	const { t } = useTranslation(['common', 'etc']);
+	const { t } = useTranslation(['etc', 'common']);
 
 	return (
 		<div className={styles.contact}>
@@ -21,7 +21,11 @@ const Contact = props => {
 				<meta name="description" content={t('description', { ns: 'common' })} />
 				<meta name="keywords" content={t('keywords', { ns: 'common' })} />
 			</Head>
-			<Map height={850} />
+
+			<div className={styles.map}>
+				<Map height={850} />
+			</div>
+
 			<div className={`mt container ${styles.info}`}>
 				<div className={styles['form-wrapper']}>
 					<Form />
@@ -46,7 +50,7 @@ const Contact = props => {
 
 export const getStaticProps = async ({ locale }) => ({
 	props: {
-		...(await serverSideTranslations(locale, ['common', 'etc'])),
+		...(await serverSideTranslations(locale, ['etc', 'common'])),
 	},
 });
 

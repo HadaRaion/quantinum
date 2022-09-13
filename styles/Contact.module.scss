@@ -1,4 +1,13 @@
 .contact {
+	.map {
+		height: 850px;
+		overflow: hidden;
+
+		@include atMedium {
+			height: 570px;
+		}
+	}
+
 	.info {
 		display: flex;
 		justify-content: space-between;

@@ -32,7 +32,8 @@ const Layout = ({ children }) => {
 
 	if (router.pathname === '/') {
 		return (
-			<Div100vh>
+			<>
+				{/* <Div100vh></Div100vh> */}
 				<Header
 					setMenuState={setMenuState}
 					showOnMobile={showOnMobile}
@@ -41,7 +42,7 @@ const Layout = ({ children }) => {
 				<MobileNav menuState={menuState} setMenuState={setMenuState} />
 
 				<main className={styles.main}>{children}</main>
-			</Div100vh>
+			</>
 		);
 	} else {
 		return (
