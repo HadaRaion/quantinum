@@ -14,11 +14,10 @@
 
 	.animation-wrapper {
 		padding-top: 3%;
-		// border: 1px solid red;
+		width: 100%;
 
 		@include atMedium {
-			width: 100%;
-			padding-top: 15%;
+			padding-top: 0%;
 		}
 	}
 

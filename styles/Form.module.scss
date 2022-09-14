@@ -1,4 +1,10 @@
 .form {
+	p {
+		@include atSmall {
+			font-size: 1rem;
+		}
+	}
+
 	label {
 		display: flex;
 		margin: 0 0 48px;

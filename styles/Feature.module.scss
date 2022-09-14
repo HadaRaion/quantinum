@@ -40,13 +40,19 @@
 				align-items: center;
 
 				@include atLarge {
-					flex: 0 0 360px;
+					width: 300px;
 				}
 
 				@include atMedium {
 					flex-direction: column;
 					flex: 1;
 					margin-bottom: 68px;
+					text-align: center;
+				}
+
+				@include atSmall {
+					flex: 1 1 300px;
+					text-align: center;
 				}
 
 				&::before {

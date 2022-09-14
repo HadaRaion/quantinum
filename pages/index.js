@@ -1,7 +1,4 @@
-import { useEffect, useState } from 'react';
 import Head from 'next/head';
-import Image from 'next/image';
-import Link from 'next/link';
 
 // Lottie
 import Lottie from 'react-lottie';
@@ -40,11 +37,6 @@ const Homepage = () => {
 	};
 
 	const isMobile = useMediaQuery({ query: '(max-width: 901px)' });
-	const [showOnMobile, setShowOnMobile] = useState(false);
-
-	useEffect(() => {
-		setShowOnMobile(isMobile);
-	}, [isMobile]);
 
 	return (
 		<div className={styles.home}>
@@ -54,7 +46,7 @@ const Homepage = () => {
 				<meta name="keywords" content={t('keywords')} />
 			</Head>
 			<div className={styles['animation-wrapper']}>
-				{showOnMobile ? (
+				{isMobile ? (
 					<Lottie options={animationForMobile} />
 				) : (
 					<Lottie options={animationForDesktop} />
