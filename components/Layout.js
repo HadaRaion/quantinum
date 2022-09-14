@@ -41,7 +41,7 @@ const Layout = ({ children }) => {
 				/>
 				<MobileNav menuState={menuState} setMenuState={setMenuState} />
 
-				<main className={styles.main}>{children}</main>
+				<main className={`${styles.main} ${styles.full}`}>{children}</main>
 			</>
 		);
 	} else {

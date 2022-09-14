@@ -51,7 +51,7 @@ const About = props => {
 				</div>
 
 				<div>
-					<h3 className={router.locale === 'ko' ? 'ko' : undefined}>{t('about-us')}</h3>
+					<h3 className={router.locale === 'ko' ? 'ko' : 'en'}>{t('about-us')}</h3>
 					{router.locale === 'ko' && (
 						<>
 							<h3 className="ko">{t('about-us2')}</h3>

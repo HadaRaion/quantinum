@@ -63,13 +63,16 @@
 
 		.card {
 			flex: 1 1 0;
-			margin: 0 10px;
+			margin-left: 10px;
+			margin-right: 10px;
 			position: relative;
 			cursor: pointer;
 			aspect-ratio: 1 / 1;
 
 			@include atMedium {
-				margin: 10px;
+				margin-left: 0px;
+				margin-right: 0px;
+				margin-bottom: 10px;
 			}
 
 			&:hover .back::after {

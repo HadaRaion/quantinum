@@ -218,8 +218,8 @@ const Header = ({ menuState, setMenuState, showOnMobile, whiteMenu }) => {
 
 					{showOnMobile ? null : <Nav whiteMenu={whiteMenu} />}
 
-					<div className={styles.hamburger} onClick={() => setMenuState(!menuState)}>
-						<div className={styles['hamburger-icon']}></div>
+					<div className="hamburger" onClick={() => setMenuState(!menuState)}>
+						<div className="hamburger-icon"></div>
 					</div>
 				</nav>
 			</div>

@@ -1,7 +1,11 @@
+$menu-height: 54px;
+
 .navbar {
 	position: fixed;
-	height: 100%;
 	width: 100%;
+	min-height: calc(100vh - 70px);
+	/* mobile viewport bug fix */
+	min-height: -webkit-fill-available;
 	z-index: 1000;
 	overflow: hidden;
 	background: $primary;
@@ -9,14 +13,16 @@
 	& > div {
 		display: flex;
 		flex-direction: column;
+		position: fixed;
 		height: 100%;
+		border: 1px solid blue;
 	}
 
 	.nav-top {
-		height: $header-height;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		height: $header-height;
 
 		.logo {
 			color: #fff;
@@ -35,7 +41,7 @@
 
 	li {
 		width: 100%;
-		height: 64px;
+		height: $menu-height;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -44,7 +50,7 @@
 		font-weight: 600;
 		font-size: 36px;
 		text-transform: capitalize;
-		margin-bottom: 50px;
+		margin-bottom: 40px;
 
 		&:last-child {
 			margin-top: auto;
@@ -55,16 +61,19 @@
 		&::after {
 			content: '';
 			width: 23px;
-			height: 64px;
-			background-size: 23px 64px;
+			height: $menu-height;
+			background-size: contain;
+			background-repeat: no-repeat;
 		}
 
 		&::before {
 			background-image: url('../public/bracket-left.svg');
+			background-position: left center;
 		}
 
 		&::after {
 			background-image: url('../public/bracket-right.svg');
+			background-position: right center;
 		}
 	}
 }
