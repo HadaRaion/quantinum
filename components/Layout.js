@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { useMediaQuery } from 'react-responsive';
 
-import Div100vh from 'react-div-100vh';
 // import { motion } from 'framer-motion';
 
 //Components
@@ -12,13 +11,34 @@ import MobileNav from './MobileNav';
 
 //Styles
 import styles from '../styles/Layout.module.scss';
+import { useRef } from 'react';
 
 const Layout = ({ children }) => {
+	const router = useRouter();
 	const isMobile = useMediaQuery({ query: '(max-width: 901px)' });
 	const [showOnMobile, setShowOnMobile] = useState(false);
 	const [menuState, setMenuState] = useState(false);
+	const [showTopBtn, setShowTopBtn] = useState(false);
+	const btnRef = useRef();
 
-	const router = useRouter();
+	useEffect(() => {
+		window.addEventListener('scroll', () => {
+			if (window.scrollY > 400) {
+				setShowTopBtn(true);
+				btnRef.current.classList.add('show');
+			} else {
+				setShowTopBtn(false);
+				btnRef.current.classList.remove('show');
+			}
+		});
+	}, [btnRef]);
+
+	const goToTop = () => {
+		window.scrollTo({
+			top: 0,
+			behavior: 'smooth',
+		});
+	};
 
 	useEffect(() => {
 		setShowOnMobile(isMobile);
@@ -33,7 +53,6 @@ const Layout = ({ children }) => {
 	if (router.pathname === '/') {
 		return (
 			<>
-				{/* <Div100vh></Div100vh> */}
 				<Header
 					setMenuState={setMenuState}
 					showOnMobile={showOnMobile}
@@ -54,6 +73,13 @@ const Layout = ({ children }) => {
 				/>
 				<MobileNav menuState={menuState} setMenuState={setMenuState} />
 				<main className={styles.main}>{children}</main>
+				<div ref={btnRef} className="top-to-btn" onClick={goToTop}>
+					{showTopBtn && (
+						<div className="icon-position icon-style">
+							<span></span>
+						</div>
+					)}
+				</div>
 				<Footer />
 			</>
 		);

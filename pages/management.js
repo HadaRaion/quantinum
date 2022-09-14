@@ -51,7 +51,6 @@ const Management = props => {
 
 const Member = ({ title, name, career, degree }) => {
 	const { t } = useTranslation('management');
-	console.log('career :>> ', career);
 
 	return (
 		<div className={styles.member}>

@@ -110,3 +110,37 @@ $bar-spacing: 10px;
 	transform: rotate(-45deg);
 	background: #fff;
 }
+
+.top-to-btn {
+	position: relative;
+	opacity: 0;
+	transition: all 0.3s ease-in-out;
+}
+
+.top-to-btn.show {
+	opacity: 1;
+}
+
+.icon-position {
+	position: fixed;
+	width: 60px;
+	height: 60px;
+	right: 40px;
+	bottom: 60px;
+}
+
+.icon-style {
+	background-color: $primary;
+	border: 2px solid #fff;
+	border-radius: 50%;
+	color: #fff;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+}
+
+.icon-style:hover {
+	animation: none;
+	background: #fff;
+	color: $black;
+	border: 1px solid $black;
+}
