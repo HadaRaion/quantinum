@@ -3,14 +3,13 @@
 	height: 100%;
 	min-height: 100vh;
 	position: relative;
-	z-index: -3;
+	z-index: -2;
 	overflow: hidden;
 	display: flex;
 	justify-content: center;
-
 	background-position: center center;
 	background-size: cover;
-	position: relative;
+	background-color: $black;
 
 	animation-name: background;
 	animation-duration: 15s;
@@ -18,26 +17,36 @@
 	animation-timing-function: linear;
 	animation-iteration-count: infinite;
 
+	@include atMedium {
+		background-image: url('../public/main_bg1.jpeg');
+		animation-name: none;
+	}
+
 	@keyframes background {
 		0% {
-			background-image: url('../public/main_bg1-min.jpeg');
+			background-image: url('../public/main_bg1.jpeg');
 		}
-		// 32% {
-		// 	background-image: url('../public/main_bg1-min.jpeg');
-		// }
-		// 33% {
-		// 	background-image: url('http://sipi.usc.edu/database/preview/aerials/2.1.06.png');
-		// }
-		// 66% {
-		// 	background-image: url('http://sipi.usc.edu/database/preview/aerials/2.1.06.png');
-		// }
-		// 67% {
-		// 	background-image: url('http://sipi.usc.edu/database/preview/aerials/2.1.06.png');
-		// }
+
+		25% {
+			background-image: url('../public/main_bg1.jpeg');
+		}
+
+		33% {
+			background-image: url('../public/main_bg2.jpeg');
+		}
+
+		65% {
+			background-image: url('../public/main_bg2.jpeg');
+		}
+
+		73% {
+			background-image: url('../public/main_bg4.jpg');
+		}
 		100% {
-			background-image: url('../public/main_bg1-min.jpeg');
+			background-image: url('../public/main_bg4.jpg');
 		}
 	}
+
 	.animation-wrapper {
 		padding-top: 3%;
 		width: 100%;
