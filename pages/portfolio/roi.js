@@ -14,6 +14,7 @@ import bannerImage2 from '../../public/ROI-banner2.jpg';
 
 // Components
 import Banner from '../../components/Banner';
+import CountUp, { useCountUp } from 'react-countup';
 
 // styles
 import styles from '../../styles/ROI.module.scss';
@@ -46,13 +47,13 @@ const ROI = () => {
 					<div className={styles.rate}>
 						<div className={styles.label}>{fixedPeriodData['roi-title']}</div>
 						<div className={`${styles.first} ${styles.value}`}>
-							<Counter form={0} to={fixedPeriodData.roi} />
+							<Counter num={fixedPeriodData.roi} />
 						</div>
 					</div>
 					<div className={styles.rate}>
 						<div className={styles.label}>{fixedPeriodData['annual-title']}</div>
 						<div className={styles.value}>
-							<Counter form={0} to={fixedPeriodData.annual} />
+							<Counter num={fixedPeriodData.annual} />
 						</div>
 					</div>
 					<div className={styles.note}>{fixedPeriodData.note}</div>
@@ -98,13 +99,13 @@ const ROI = () => {
 					<div className={styles.rate}>
 						<div className={styles.label}>{estPeriodData['roi-title']}</div>
 						<div className={styles.value}>
-							<Counter form={0} to={estPeriodData.roi} />
+							<Counter num={estPeriodData.roi} />
 						</div>
 					</div>
 					<div className={styles.rate}>
 						<div className={styles.label}>{estPeriodData['annual-title']}</div>
 						<div className={styles.value}>
-							<Counter form={0} to={estPeriodData.annual} />
+							<Counter num={estPeriodData.annual} />
 						</div>
 					</div>
 					<div className={styles.note}>{estPeriodData.note}</div>
@@ -129,29 +130,8 @@ const ROI = () => {
 		</div>
 	);
 };
-const Counter = ({ from, to }) => {
-	const nodeRef = useRef();
-
-	// useEffect(() => {
-	// 	const node = nodeRef.current;
-
-	// 	const controls = animate(from, to, {
-	// 		duration: 1,
-	// 		onUpdate(value) {
-	// 			node.textContent = value.toFixed(2);
-	// 		},
-	// 	});
-
-	// 	return () => controls.stop();
-	// }, [from, to]);
-
-	// return <p ref={nodeRef} />;
-
-	return (
-		<>
-			<span ref={nodeRef}>{to}</span>%
-		</>
-	);
+const Counter = ({ num }) => {
+	return <CountUp start={0.0} end={num} decimals={2} duration={1.2} suffix="%" enableScrollSpy />;
 };
 
 const Table = ({ caption, thead, tbody }) => {
