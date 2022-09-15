@@ -25,10 +25,10 @@ const Layout = ({ children }) => {
 		window.addEventListener('scroll', () => {
 			if (window.scrollY > 400) {
 				setShowTopBtn(true);
-				btnRef && btnRef.current.classList.add('show');
+				btnRef && btnRef !== null && btnRef.current.classList.add('show');
 			} else {
 				setShowTopBtn(false);
-				btnRef && btnRef.current.classList.remove('show');
+				btnRef && btnRef !== null && btnRef.current.classList.remove('show');
 			}
 		});
 	}, [btnRef]);

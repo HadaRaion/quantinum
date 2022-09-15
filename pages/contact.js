@@ -40,9 +40,9 @@ const Contact = props => {
 				viewport={{ once: true }}
 				transition={{ staggerChildren: 0.1 }}
 				className={`mt container ${styles.info}`}>
-				<motion.div variants={slideInUp} className={styles['form-wrapper']}>
+				<div className={styles['form-wrapper']}>
 					<Form />
-				</motion.div>
+				</div>
 				<div className={styles['address-wrapper']}>
 					<motion.h3 variants={slideInUp} className="en">
 						Our Office
