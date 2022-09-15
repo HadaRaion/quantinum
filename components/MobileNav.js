@@ -1,4 +1,3 @@
-import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
@@ -8,10 +7,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 // styles
 import styles from '../styles/MobileNav.module.scss';
 
-const transition = { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.9] };
-
 const parent = {
-	animate: { transition: { staggerChildren: 0.1, delayChildren: 1.2 } },
+	animate: { transition: { staggerChildren: 0.1, delayChildren: 0.5 } },
 };
 
 const linkSlideUp = {
@@ -33,9 +30,10 @@ const MobileNav = ({ setMenuState, menuState }) => {
 					<>
 						<motion.nav
 							className={styles.navbar}
-							initial={{ visibility: 'hidden' }}
-							animate={{ visibility: 'visible', transition: { delay: 0.8 } }}
-							exit={{ visibility: 'hidden', transition: { delay: 0.8 } }}>
+							initial={{ x: '100vw' }}
+							animate={{ x: '0' }}
+							exit={{ x: '100vw' }}
+							transition={{ duration: 0.3, type: 'tween' }}>
 							<div className="container">
 								<div className={styles['nav-top']}>
 									<Link href="/">
@@ -242,7 +240,6 @@ const MobileNav = ({ setMenuState, menuState }) => {
 									initial="initial"
 									animate="animate"
 									exit="exit"
-									transition={transition}
 									className={styles.nav}>
 									<motion.li variants={linkSlideUp}>
 										<Link href="/about">
@@ -272,18 +269,6 @@ const MobileNav = ({ setMenuState, menuState }) => {
 								</motion.ul>
 							</div>
 						</motion.nav>
-						<motion.div
-							className={styles.panel}
-							initial={{ width: 0 }}
-							animate={{
-								width: ['0%', '100%', '0%'],
-								right: [0, 0, 0],
-							}}
-							exit={{
-								width: ['0%', '100%', '0%'],
-								left: [null, 0, 0],
-							}}
-							transition={{ ...transition, duration: 1.6, times: [0, 0.5, 1] }}></motion.div>
 					</>
 				)}
 			</AnimatePresence>
