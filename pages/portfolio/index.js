@@ -3,6 +3,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 
+// motion
+import { motion } from 'framer-motion';
+
 // i18n
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
@@ -18,6 +21,11 @@ import Banner from '../../components/Banner';
 
 // styles
 import styles from '../../styles/Portfolio.module.scss';
+
+const slideInUp = {
+	hidden: { y: 20, opacity: 0 },
+	visible: { y: 0, opacity: 1, transition: { type: 'spring', bounce: 0.4, duration: 1 } },
+};
 
 const Portfolio = props => {
 	const { t } = useTranslation(['etc', 'common']);
@@ -37,16 +45,23 @@ const Portfolio = props => {
 				title={'Portfolio'}
 				subtitle={''}
 			/>
-			<section className={`container mt ${styles.quote}`}>
-				<h2 className="en">
+			<motion.section
+				initial={'hidden'}
+				whileInView={'visible'}
+				viewport={{ once: true }}
+				transition={{ staggerChildren: 0.1 }}
+				className={`container mt ${styles.quote}`}>
+				<motion.h2 variants={slideInUp} className="en">
 					The passion to excel.
 					<br />
 					We think different and provide tailor-made solutions <br />
 					for your sustainable growth.
-				</h2>
+				</motion.h2>
 
-				<h5 className="ko">Sunghee Kang, CEO</h5>
-			</section>
+				<motion.h5 variants={slideInUp} className="ko">
+					Sunghee Kang, CEO
+				</motion.h5>
+			</motion.section>
 
 			<section className={`mt ${styles.links}`}>
 				<div className={styles.right}>

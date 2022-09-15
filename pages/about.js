@@ -1,10 +1,9 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-import { useRef } from 'react';
 
 // motion
-import { useInView } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 // i18n
 import { useTranslation } from 'next-i18next';
@@ -25,11 +24,14 @@ import Form from '../components/Form';
 // styles
 import styles from '../styles/About.module.scss';
 
+const slideInUp = {
+	hidden: { y: 20, opacity: 0 },
+	visible: { y: 0, opacity: 1, transition: { type: 'spring', bounce: 0.4, duration: 1 } },
+};
+
 const About = props => {
 	const { t } = useTranslation(['about', 'common']);
 	const router = useRouter();
-	const ref = useRef(null);
-	const isInView = useInView(ref, { once: true });
 
 	const handleClick = e => {
 		e.preventDefault();
@@ -51,41 +53,49 @@ const About = props => {
 				subtitle={''}
 			/>
 
-			<section ref={ref} className={`${styles['about-us']} container mt`}>
-				<div className={styles['image-wrapper']}>
+			<motion.section
+				initial={'hidden'}
+				whileInView={'visible'}
+				viewport={{ once: true }}
+				transition={{ staggerChildren: 0.1 }}
+				className={`${styles['about-us']} container mt`}>
+				<motion.div variants={slideInUp} className={styles['image-wrapper']}>
 					<Image
 						src={aboutUsImage}
 						placeholder="blur"
 						alt="About us"
 						layout="fill"
 						objectFit="cover"
-						style={{
-							transform: isInView ? 'none' : 'translateX(-200px)',
-							opacity: isInView ? 1 : 0,
-							transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
-						}}
 					/>
-				</div>
+				</motion.div>
 
 				<div>
-					<h3 className={router.locale === 'ko' ? 'ko' : 'en'}>{t('about-us')}</h3>
+					<motion.h3 variants={slideInUp} className={router.locale === 'ko' ? 'ko' : 'en'}>
+						{t('about-us')}
+					</motion.h3>
 					{router.locale === 'ko' && (
 						<>
-							<h3 className="ko">{t('about-us2')}</h3>
-							<h3 className="ko">{t('about-us3')}</h3>
-							<h3 className="ko">{t('about-us4')}</h3>
-							<p>
+							<motion.h3 variants={slideInUp} className="ko">
+								{t('about-us2')}
+							</motion.h3>
+							<motion.h3 variants={slideInUp} className="ko">
+								{t('about-us3')}
+							</motion.h3>
+							<motion.h3 variants={slideInUp} className="ko">
+								{t('about-us4')}
+							</motion.h3>
+							<motion.p variants={slideInUp}>
 								Here to create portfolios that drive stability and high returns for customers with
 								investment convergence portfolio of capital market and real estate PF.
-							</p>
+							</motion.p>
 						</>
 					)}
 
-					<button className="btn" onClick={handleClick}>
+					<motion.button variants={slideInUp} className="btn" onClick={handleClick}>
 						VIEW OUR PROS
-					</button>
+					</motion.button>
 				</div>
-			</section>
+			</motion.section>
 
 			<section className={`${styles.cards} mt`}>
 				<Card title={'What We Do'} text={t('what-we-do')} imgSrc={whatWeDoImage} />

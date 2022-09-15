@@ -1,5 +1,8 @@
 import Head from 'next/head';
 
+// motion
+import { motion } from 'framer-motion';
+
 // i18n
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
@@ -10,6 +13,11 @@ import Form from '../components/Form';
 
 // styles
 import styles from '../styles/Contact.module.scss';
+
+const slideInUp = {
+	hidden: { y: 20, opacity: 0 },
+	visible: { y: 0, opacity: 1, transition: { type: 'spring', bounce: 0.4, duration: 1 } },
+};
 
 const Contact = props => {
 	const { t } = useTranslation(['etc', 'common']);
@@ -26,24 +34,31 @@ const Contact = props => {
 				<Map height={850} />
 			</div>
 
-			<div className={`mt container ${styles.info}`}>
-				<div className={styles['form-wrapper']}>
+			<motion.div
+				initial={'hidden'}
+				whileInView={'visible'}
+				viewport={{ once: true }}
+				transition={{ staggerChildren: 0.1 }}
+				className={`mt container ${styles.info}`}>
+				<motion.div variants={slideInUp} className={styles['form-wrapper']}>
 					<Form />
-				</div>
+				</motion.div>
 				<div className={styles['address-wrapper']}>
-					<h3 className="en">Our Office</h3>
-					<div className="mt-sm">
+					<motion.h3 variants={slideInUp} className="en">
+						Our Office
+					</motion.h3>
+					<motion.div variants={slideInUp} className="mt-sm">
 						<p className="small">Our Location</p>
 						<h5>{t('address')}</h5>
-					</div>
-					<div className="mt-sm">
+					</motion.div>
+					<motion.div variants={slideInUp} className="mt-sm">
 						<p className="small">Write To Us</p>
 						<h5>
 							<a href="mailto:info@quantinuminvestment.com">info@quantinuminvestment.com</a>
 						</h5>
-					</div>
+					</motion.div>
 				</div>
-			</div>
+			</motion.div>
 		</div>
 	);
 };
