@@ -75,7 +75,13 @@ const ROI = () => {
 			</section>
 
 			<section className={`mt ${styles.quote}`}>
-				<Image src={bannerImage2} layout="fill" objectFit="cover" alt="Banner Image" />
+				<Image
+					placeholder="blur"
+					src={bannerImage2}
+					layout="fill"
+					objectFit="cover"
+					alt="Banner Image"
+				/>
 				<div className={`container ${styles.text}`}>
 					<h2 className="en">
 						The passion to excel.

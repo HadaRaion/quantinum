@@ -50,12 +50,24 @@ const Portfolio = props => {
 
 			<section className={`mt ${styles.links}`}>
 				<div className={styles.right}>
-					<Image src={linkImage1} alt="Building" layout="fill" objectFit="cover" />
+					<Image
+						placeholder="blur"
+						src={linkImage1}
+						alt="Building"
+						layout="fill"
+						objectFit="cover"
+					/>
 				</div>
 
 				<div className={styles.left}>
 					<div className={styles.bg2}>
-						<Image src={linkImage2} alt="Working people" layout="fill" objectFit="cover" />
+						<Image
+							placeholder="blur"
+							src={linkImage2}
+							alt="Working people"
+							layout="fill"
+							objectFit="cover"
+						/>
 					</div>
 					<div className={`${styles.link} ${styles.link1}`}>
 						<Link href="/portfolio/feature">
@@ -72,7 +84,13 @@ const Portfolio = props => {
 						</Link>
 					</div>
 					<div className={styles.bg3}>
-						<Image src={linkImage3} alt="Laptop on the desk" layout="fill" objectFit="cover" />
+						<Image
+							placeholder="blur"
+							src={linkImage3}
+							alt="Laptop on the desk"
+							layout="fill"
+							objectFit="cover"
+						/>
 					</div>
 				</div>
 			</section>

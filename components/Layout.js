@@ -25,10 +25,10 @@ const Layout = ({ children }) => {
 		window.addEventListener('scroll', () => {
 			if (window.scrollY > 400) {
 				setShowTopBtn(true);
-				btnRef.current.classList.add('show');
+				btnRef && btnRef.current.classList.add('show');
 			} else {
 				setShowTopBtn(false);
-				btnRef.current.classList.remove('show');
+				btnRef && btnRef.current.classList.remove('show');
 			}
 		});
 	}, [btnRef]);
@@ -73,10 +73,10 @@ const Layout = ({ children }) => {
 				/>
 				<MobileNav menuState={menuState} setMenuState={setMenuState} />
 				<main className={styles.main}>{children}</main>
-				<div ref={btnRef} className="top-to-btn" onClick={goToTop}>
+				<div ref={btnRef} className="to-top-btn" onClick={goToTop}>
 					{showTopBtn && (
 						<div className="icon-position icon-style">
-							<span></span>
+							<div className="arrow-up"></div>
 						</div>
 					)}
 				</div>

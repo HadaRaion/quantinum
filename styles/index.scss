@@ -4,6 +4,7 @@
 @import './font';
 @import './spacing';
 @import './btn';
+@import './hamburger';
 
 :root {
 	--layout-max-width: 1400px;
@@ -49,98 +50,4 @@
 	position: fixed;
 	overflow: hidden;
 	touch-action: none;
-}
-
-$bar-width: 30px;
-$bar-height: 2px;
-$bar-spacing: 10px;
-
-.hamburger {
-	width: $bar-width;
-	height: $bar-height + $bar-spacing * 2;
-	cursor: pointer;
-	display: none;
-
-	@include atMedium {
-		display: block;
-	}
-}
-
-.hamburger-icon,
-.hamburger-icon::before,
-.hamburger-icon::after {
-	width: $bar-width;
-	height: $bar-height;
-}
-
-.hamburger-icon {
-	position: relative;
-	transform: translateY($bar-spacing);
-	background: $black;
-}
-
-.hamburger-icon:before {
-	content: '';
-	position: absolute;
-	left: 0;
-	bottom: $bar-spacing;
-	background: $black;
-}
-
-.hamburger-icon:after {
-	content: '';
-	position: absolute;
-	left: 0;
-	top: $bar-spacing;
-	background: $black;
-}
-
-.hamburger-icon.close:after {
-	top: 0;
-	transform: rotate(45deg);
-	background: #fff;
-}
-
-.hamburger-icon.close {
-	background: $primary;
-}
-
-.hamburger-icon.close:before {
-	bottom: 0;
-	transform: rotate(-45deg);
-	background: #fff;
-}
-
-.top-to-btn {
-	position: relative;
-	opacity: 0;
-	transition: all 0.3s ease-in-out;
-}
-
-.top-to-btn.show {
-	opacity: 1;
-}
-
-.icon-position {
-	position: fixed;
-	width: 60px;
-	height: 60px;
-	right: 40px;
-	bottom: 60px;
-}
-
-.icon-style {
-	background-color: $primary;
-	border: 2px solid #fff;
-	border-radius: 50%;
-	color: #fff;
-	cursor: pointer;
-	transition: all 0.3s ease-in-out;
-}
-
-.icon-style:hover {
-	animation: none;
-	background: #fff;
-	color: $black;
-	border: 1px solid $black;
 }

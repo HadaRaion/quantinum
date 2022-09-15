@@ -1,6 +1,10 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
+import { useRef } from 'react';
+
+// motion
+import { useInView } from 'framer-motion';
 
 // i18n
 import { useTranslation } from 'next-i18next';
@@ -24,6 +28,8 @@ import styles from '../styles/About.module.scss';
 const About = props => {
 	const { t } = useTranslation(['about', 'common']);
 	const router = useRouter();
+	const ref = useRef(null);
+	const isInView = useInView(ref, { once: true });
 
 	const handleClick = e => {
 		e.preventDefault();
@@ -45,9 +51,20 @@ const About = props => {
 				subtitle={''}
 			/>
 
-			<section className={`${styles['about-us']} container mt`}>
+			<section ref={ref} className={`${styles['about-us']} container mt`}>
 				<div className={styles['image-wrapper']}>
-					<Image src={aboutUsImage} alt="About us" layout="fill" objectFit="cover" />
+					<Image
+						src={aboutUsImage}
+						placeholder="blur"
+						alt="About us"
+						layout="fill"
+						objectFit="cover"
+						style={{
+							transform: isInView ? 'none' : 'translateX(-200px)',
+							opacity: isInView ? 1 : 0,
+							transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
+						}}
+					/>
 				</div>
 
 				<div>
@@ -100,7 +117,7 @@ const Card = ({ title, text, imgSrc }) => {
 	return (
 		<div className={styles.card}>
 			<div className={styles.front}>
-				<Image src={imgSrc} alt="About us" layout="fill" objectFit="cover" />
+				<Image placeholder="blur" src={imgSrc} alt="About us" layout="fill" objectFit="cover" />
 
 				<h3 className="en">{title}</h3>
 			</div>

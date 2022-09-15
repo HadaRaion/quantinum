@@ -76,3 +76,13 @@ $menu-height: 54px;
 		}
 	}
 }
+
+.panel {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	min-height: calc(100vh - 70px);
+	min-height: -webkit-fill-available;
+	background-color: $lightGray;
+	z-index: 10000;
+}

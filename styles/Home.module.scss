@@ -8,10 +8,36 @@
 	display: flex;
 	justify-content: center;
 
-	background: url('../public/main_bg1-min.jpeg') center center;
+	background-position: center center;
 	background-size: cover;
 	position: relative;
 
+	animation-name: background;
+	animation-duration: 15s;
+	animation-direction: alternate;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+
+	@keyframes background {
+		0% {
+			background-image: url('../public/main_bg1-min.jpeg');
+		}
+		// 32% {
+		// 	background-image: url('../public/main_bg1-min.jpeg');
+		// }
+		// 33% {
+		// 	background-image: url('http://sipi.usc.edu/database/preview/aerials/2.1.06.png');
+		// }
+		// 66% {
+		// 	background-image: url('http://sipi.usc.edu/database/preview/aerials/2.1.06.png');
+		// }
+		// 67% {
+		// 	background-image: url('http://sipi.usc.edu/database/preview/aerials/2.1.06.png');
+		// }
+		100% {
+			background-image: url('../public/main_bg1-min.jpeg');
+		}
+	}
 	.animation-wrapper {
 		padding-top: 3%;
 		width: 100%;

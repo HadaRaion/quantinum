@@ -1,0 +1,59 @@
+$bar-width: 30px;
+$bar-height: 2px;
+$bar-spacing: 10px;
+
+.hamburger {
+	width: $bar-width;
+	height: $bar-height + $bar-spacing * 2;
+	cursor: pointer;
+	display: none;
+
+	@include atMedium {
+		display: block;
+	}
+}
+
+.hamburger-icon,
+.hamburger-icon::before,
+.hamburger-icon::after {
+	width: $bar-width;
+	height: $bar-height;
+}
+
+.hamburger-icon {
+	position: relative;
+	transform: translateY($bar-spacing);
+	background: $black;
+}
+
+.hamburger-icon:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: $bar-spacing;
+	background: $black;
+}
+
+.hamburger-icon:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: $bar-spacing;
+	background: $black;
+}
+
+.hamburger-icon.close:after {
+	top: 0;
+	transform: rotate(45deg);
+	background: #fff;
+}
+
+.hamburger-icon.close {
+	background: $primary;
+}
+
+.hamburger-icon.close:before {
+	bottom: 0;
+	transform: rotate(-45deg);
+	background: #fff;
+}
