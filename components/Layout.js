@@ -79,9 +79,8 @@ const Layout = ({ children }) => {
 				<MobileNav menuState={menuState} setMenuState={setMenuState} />
 				{/* exitBeforeEnter */}
 				<AnimatePresence
-					// exitAfterEnter
+					exitBeforeEnter
 					initial={false}
-					mode="wait"
 					onExitComplete={() => window.scrollTo(0, 0)}>
 					<motion.main
 						key={router.asPath}
@@ -106,10 +105,11 @@ const Layout = ({ children }) => {
 				<MobileNav menuState={menuState} setMenuState={setMenuState} />
 
 				<AnimatePresence
-					// exitAfterEnter
+					exitBeforeEnter
 					initial={false}
-					mode="wait"
-					onExitComplete={() => window.scrollTo(0, 0)}>
+					onExitComplete={() => window.scrollTo(0, 0)}
+					// mode="wait"
+				>
 					<motion.main
 						key={router.asPath}
 						variants={pageTransition}
