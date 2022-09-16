@@ -76,6 +76,7 @@ const Layout = ({ children }) => {
 				<AnimatePresence
 					exitBeforeEnter
 					initial={false}
+					mode="wait"
 					onExitComplete={() => window.scrollTo(0, 0)}>
 					<motion.main
 						key={router.asPath}
@@ -102,9 +103,8 @@ const Layout = ({ children }) => {
 				<AnimatePresence
 					exitBeforeEnter
 					initial={false}
-					onExitComplete={() => window.scrollTo(0, 0)}
-					// mode="wait"
-				>
+					mode="wait"
+					onExitComplete={() => window.scrollTo(0, 0)}>
 					<motion.main
 						key={router.asPath}
 						variants={pageTransition}
