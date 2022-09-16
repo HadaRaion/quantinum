@@ -125,7 +125,7 @@ const About = props => {
 
 const Card = ({ title, text, imgSrc }) => {
 	return (
-		<div className={styles.card}>
+		<motion.div variants={slideInUp} className={styles.card}>
 			<div className={styles.front}>
 				<Image placeholder="blur" src={imgSrc} alt="About us" layout="fill" objectFit="cover" />
 
@@ -135,7 +135,7 @@ const Card = ({ title, text, imgSrc }) => {
 				<h3 className="en">{title}</h3>
 				<p>{text}</p>
 			</div>
-		</div>
+		</motion.div>
 	);
 };
 

@@ -77,7 +77,7 @@ const Layout = ({ children }) => {
 					whiteMenu={router.pathname === '/contact'}
 				/>
 				<MobileNav menuState={menuState} setMenuState={setMenuState} />
-				{/* exitBeforeEnter */}
+
 				<AnimatePresence
 					exitBeforeEnter
 					initial={false}
