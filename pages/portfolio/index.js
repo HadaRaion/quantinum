@@ -85,14 +85,14 @@ const Portfolio = props => {
 						/>
 					</div>
 					<div className={`${styles.link} ${styles.link1}`}>
-						<Link scroll={false} href="/portfolio/feature">
+						<Link href="/portfolio/feature">
 							<a className={router.locale === 'en' ? 'en' : undefined}>
 								<span>{t('toFeature')}</span>
 							</a>
 						</Link>
 					</div>
 					<div className={`${styles.link} ${styles.link2}`}>
-						<Link scroll={false} href="/portfolio/roi">
+						<Link href="/portfolio/roi">
 							<a className={router.locale === 'en' ? 'en' : undefined}>
 								<span>{t('toROI')}</span>
 							</a>
