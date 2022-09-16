@@ -97,7 +97,7 @@ const About = props => {
 				</div>
 			</motion.section>
 
-			<section className={`${styles.cards} mt`}>
+			<motion.section className={`${styles.cards} mt`}>
 				<Card title={'What We Do'} text={t('what-we-do')} imgSrc={whatWeDoImage} />
 				<Card
 					title={'Competitive Edge'}
@@ -109,7 +109,7 @@ const About = props => {
 					text={t('investment-philosophy')}
 					imgSrc={investmentEdgeImage}
 				/>
-			</section>
+			</motion.section>
 
 			<section className={`${styles['about-contact']} container mt`}>
 				<div className={styles['form-wrapper']}>
