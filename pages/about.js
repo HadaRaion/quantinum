@@ -97,7 +97,11 @@ const About = props => {
 				</div>
 			</motion.section>
 
-			<motion.section className={`${styles.cards} mt`}>
+			<motion.section
+				initial={'hidden'}
+				whileInView={'visible'}
+				viewport={{ once: true }}
+				className={`${styles.cards} mt`}>
 				<Card title={'What We Do'} text={t('what-we-do')} imgSrc={whatWeDoImage} />
 				<Card
 					title={'Competitive Edge'}

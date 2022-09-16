@@ -19,10 +19,17 @@ const pageTransition = {
 	},
 	show: {
 		x: '0',
+		transition: {
+			type: 'tween',
+			duration: 0.2,
+		},
 	},
 	exit: {
 		x: '-100vw',
-
+		transition: {
+			type: 'tween',
+			duration: 0.2,
+		},
 		// transition: {
 		// 	duration: 0.3,
 		// },
