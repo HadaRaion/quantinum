@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 
-// motion
+// Framer motion
 import { motion } from 'framer-motion';
 
 // i18n
@@ -85,14 +85,14 @@ const Portfolio = props => {
 						/>
 					</div>
 					<div className={`${styles.link} ${styles.link1}`}>
-						<Link href="/portfolio/feature">
+						<Link scroll={false} href="/portfolio/feature">
 							<a className={router.locale === 'en' ? 'en' : undefined}>
 								<span>{t('toFeature')}</span>
 							</a>
 						</Link>
 					</div>
 					<div className={`${styles.link} ${styles.link2}`}>
-						<Link href="/portfolio/roi">
+						<Link scroll={false} href="/portfolio/roi">
 							<a className={router.locale === 'en' ? 'en' : undefined}>
 								<span>{t('toROI')}</span>
 							</a>

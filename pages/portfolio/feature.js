@@ -40,9 +40,10 @@ const Feature = props => {
 			/>
 			<section className={`container mt`}>
 				<ul className={styles['capital-market-features']}>
-					{capitalMarketFeatures.map(el => (
-						<FeatureEl key={el.id} title={el.title} cons={el.cons} pros={el.pros} />
-					))}
+					{typeof capitalMarketFeatures === 'object' &&
+						capitalMarketFeatures.map(el => (
+							<FeatureEl key={el.id} title={el.title} cons={el.cons} pros={el.pros} />
+						))}
 				</ul>
 			</section>
 			<Banner
@@ -57,9 +58,10 @@ const Feature = props => {
 			/>
 			<section className={`container mt`}>
 				<ul className={styles['real-estate-features']}>
-					{realEstateFeatures.map(el => (
-						<FeatureEl key={el.id} title={el.title} cons={el.cons} pros={el.pros} />
-					))}
+					{typeof realEstateFeatures === 'object' &&
+						realEstateFeatures.map(el => (
+							<FeatureEl key={el.id} title={el.title} cons={el.cons} pros={el.pros} />
+						))}
 				</ul>
 			</section>
 		</div>

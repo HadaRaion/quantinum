@@ -5,9 +5,6 @@ import Lottie from 'react-lottie';
 import animationDataForDesktop from '../svg/QI_logo_ani_horizontal.json';
 import animationDataForMobile from '../svg/QI_logo_ani_vertical.json';
 
-// motion
-import { motion } from 'framer-motion';
-
 // i18n
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';

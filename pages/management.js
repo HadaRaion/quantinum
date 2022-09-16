@@ -14,7 +14,7 @@ import Banner from '../components/Banner';
 // styles
 import styles from '../styles/Management.module.scss';
 
-const Management = props => {
+const Management = () => {
 	const { t } = useTranslation(['management', 'common']);
 	const router = useRouter();
 
@@ -35,15 +35,16 @@ const Management = props => {
 				subtitle={''}
 			/>
 			<section className="container mt">
-				{managementArray.map(item => (
-					<Member
-						key={item.id}
-						title={item.title}
-						name={item.name}
-						career={item.career}
-						degree={item.degree}
-					/>
-				))}
+				{typeof managementArray === 'object' &&
+					managementArray.map(item => (
+						<Member
+							key={item.id}
+							title={item.title}
+							name={item.name}
+							career={item.career}
+							degree={item.degree}
+						/>
+					))}
 			</section>
 		</div>
 	);

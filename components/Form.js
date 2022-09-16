@@ -44,7 +44,7 @@ const Form = () => {
 			<motion.h2 variants={slideInUp} className="en">
 				Feel free to contact us
 			</motion.h2>
-			<motion.p c variants={slideInUp} lassName="mt-sm">
+			<motion.p variants={slideInUp} className="mt-sm">
 				We’re always happy to hear from anyone interested in working with or for us.
 				<br />
 				Please use the contact form to get in touch!

@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { useMediaQuery } from 'react-responsive';
 
-// import { motion } from 'framer-motion';
+// Framer motion
+import { motion, AnimatePresence } from 'framer-motion';
 
 //Components
 import Header from './Header';
@@ -11,7 +12,27 @@ import MobileNav from './MobileNav';
 
 //Styles
 import styles from '../styles/Layout.module.scss';
-import { useRef } from 'react';
+
+const pageTransition = {
+	hidden: {
+		opacity: 0,
+		transition: {
+			duration: 0.3,
+		},
+	},
+	show: {
+		opacity: 1,
+		transition: {
+			duration: 0.3,
+		},
+	},
+	exit: {
+		opacity: 0,
+		transition: {
+			duration: 0.3,
+		},
+	},
+};
 
 const Layout = ({ children }) => {
 	const router = useRouter();
@@ -19,19 +40,16 @@ const Layout = ({ children }) => {
 	const [showOnMobile, setShowOnMobile] = useState(false);
 	const [menuState, setMenuState] = useState(false);
 	const [showTopBtn, setShowTopBtn] = useState(false);
-	const btnRef = useRef();
 
 	useEffect(() => {
 		window.addEventListener('scroll', () => {
 			if (window.scrollY > 400) {
 				setShowTopBtn(true);
-				btnRef && btnRef !== null && btnRef.current.classList.add('show');
 			} else {
 				setShowTopBtn(false);
-				btnRef && btnRef !== null && btnRef.current.classList.remove('show');
 			}
 		});
-	}, [btnRef]);
+	}, []);
 
 	const goToTop = () => {
 		window.scrollTo({
@@ -59,8 +77,18 @@ const Layout = ({ children }) => {
 					whiteMenu={router.pathname === '/contact'}
 				/>
 				<MobileNav menuState={menuState} setMenuState={setMenuState} />
-
-				<main className={`${styles.main} ${styles.full}`}>{children}</main>
+				{/* exitBeforeEnter */}
+				<AnimatePresence initial={false} mode="wait" onExitComplete={() => window.scrollTo(0, 0)}>
+					<motion.main
+						key={router.asPath}
+						variants={pageTransition}
+						initial="hidden"
+						animate="show"
+						exit="exit"
+						className={`${styles.main} ${styles.full}`}>
+						{children}
+					</motion.main>
+				</AnimatePresence>
 			</>
 		);
 	} else {
@@ -72,13 +100,31 @@ const Layout = ({ children }) => {
 					whiteMenu={router.pathname === '/contact'}
 				/>
 				<MobileNav menuState={menuState} setMenuState={setMenuState} />
-				<main className={styles.main}>{children}</main>
-				<div ref={btnRef} className="to-top-btn" onClick={goToTop}>
-					{showTopBtn && (
-						<div className="icon-position icon-style">
-							<div className="arrow-up"></div>
-						</div>
-					)}
+
+				<AnimatePresence initial={false} mode="wait" onExitComplete={() => window.scrollTo(0, 0)}>
+					<motion.main
+						key={router.asPath}
+						variants={pageTransition}
+						initial="hidden"
+						animate="show"
+						exit="exit"
+						className={styles.main}>
+						{children}
+					</motion.main>
+				</AnimatePresence>
+
+				<div className="to-top-btn show" onClick={goToTop}>
+					<AnimatePresence>
+						{showTopBtn ? (
+							<motion.div
+								initial={{ opacity: 0 }}
+								animate={{ opacity: 1 }}
+								exit={{ opacity: 0, transition: { duration: 0.5 } }}
+								className="icon-position icon-style">
+								<div className="arrow-up"></div>
+							</motion.div>
+						) : null}
+					</AnimatePresence>
 				</div>
 				<Footer />
 			</>

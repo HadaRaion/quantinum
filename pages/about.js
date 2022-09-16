@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 
-// motion
+// Framer motion
 import { motion } from 'framer-motion';
 
 // i18n

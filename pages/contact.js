@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-// motion
+// Framer motion
 import { motion } from 'framer-motion';
 
 // i18n

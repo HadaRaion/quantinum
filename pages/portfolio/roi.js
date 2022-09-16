@@ -154,85 +154,87 @@ const Table = ({ caption, thead, tbody }) => {
 			<caption>{caption}</caption>
 			<thead>
 				<tr>
-					{thead.map(el => (
-						<th key={Math.random()} scope="col">
-							{el}
-						</th>
-					))}
+					{typeof thead === 'object' &&
+						thead.map(el => (
+							<th key={Math.random()} scope="col">
+								{el}
+							</th>
+						))}
 				</tr>
 			</thead>
 			<tbody>
-				{tbody.map((el, index) => (
-					<tr key={Math.random()}>
-						<td scope="row" data-label={thead[0]}>
-							{el.product}
-							{showOnMobile && (
-								<button onClick={() => clickHandler(index)}>
-									{dropdown === index ? (
-										<svg
-											xmlns="http://www.w3.org/2000/svg"
-											width="25"
-											height="25"
-											viewBox="0 0 25 25">
-											<rect width="25" height="25" fill="#e0e0e0" />
-											<line
-												x2="15"
-												transform="translate(5 12.5)"
-												fill="none"
-												stroke="#fff"
-												strokeWidth="1"
-											/>
-										</svg>
-									) : (
-										<svg
-											xmlns="http://www.w3.org/2000/svg"
-											width="25"
-											height="25"
-											viewBox="0 0 25 25">
-											<rect width="25" height="25" fill="#e0e0e0" />
-											<line
-												x2="15"
-												transform="translate(5 12.5)"
-												fill="none"
-												stroke="#fff"
-												strokeWidth="1"
-											/>
-											<line
-												x2="15"
-												transform="translate(12.5 5) rotate(90)"
-												fill="none"
-												stroke="#fff"
-												strokeWidth="1"
-											/>
-										</svg>
-									)}
-								</button>
+				{typeof tbody === 'object' &&
+					tbody.map((el, index) => (
+						<tr key={Math.random()}>
+							<td scope="row" data-label={thead[0]}>
+								{el.product}
+								{showOnMobile && (
+									<button onClick={() => clickHandler(index)}>
+										{dropdown === index ? (
+											<svg
+												xmlns="http://www.w3.org/2000/svg"
+												width="25"
+												height="25"
+												viewBox="0 0 25 25">
+												<rect width="25" height="25" fill="#e0e0e0" />
+												<line
+													x2="15"
+													transform="translate(5 12.5)"
+													fill="none"
+													stroke="#fff"
+													strokeWidth="1"
+												/>
+											</svg>
+										) : (
+											<svg
+												xmlns="http://www.w3.org/2000/svg"
+												width="25"
+												height="25"
+												viewBox="0 0 25 25">
+												<rect width="25" height="25" fill="#e0e0e0" />
+												<line
+													x2="15"
+													transform="translate(5 12.5)"
+													fill="none"
+													stroke="#fff"
+													strokeWidth="1"
+												/>
+												<line
+													x2="15"
+													transform="translate(12.5 5) rotate(90)"
+													fill="none"
+													stroke="#fff"
+													strokeWidth="1"
+												/>
+											</svg>
+										)}
+									</button>
+								)}
+							</td>
+
+							{dropdown === index && (
+								<>
+									<td data-label={thead[1]}>{el.total}</td>
+									<td data-label={thead[2]}>{el.start}</td>
+									<td data-label={thead[3]}>{el.period}</td>
+									<td data-label={thead[4]}>{el['period-roi']}</td>
+									<td data-label={thead[5]}>{el['annual-roi']}</td>
+									<td data-label={thead[6]}>{el.remarks}</td>
+								</>
 							)}
-						</td>
 
-						{dropdown === index && (
-							<>
-								<td data-label={thead[1]}>{el.total}</td>
-								<td data-label={thead[2]}>{el.start}</td>
-								<td data-label={thead[3]}>{el.period}</td>
-								<td data-label={thead[4]}>{el['period-roi']}</td>
-								<td data-label={thead[5]}>{el['annual-roi']}</td>
-								<td data-label={thead[6]}>{el.remarks}</td>
-							</>
-						)}
-
-						{!showOnMobile && (
-							<>
-								<td data-label={thead[1]}>{el.total}</td>
-								<td data-label={thead[2]}>{el.start}</td>
-								<td data-label={thead[3]}>{el.period}</td>
-								<td data-label={thead[4]}>{el['period-roi']}</td>
-								<td data-label={thead[5]}>{el['annual-roi']}</td>
-								<td data-label={thead[6]}>{el.remarks}</td>
-							</>
-						)}
-					</tr>
-				))}
+							{!showOnMobile && (
+								<>
+									<td data-label={thead[1]}>{el.total}</td>
+									<td data-label={thead[2]}>{el.start}</td>
+									<td data-label={thead[3]}>{el.period}</td>
+									<td data-label={thead[4]}>{el['period-roi']}</td>
+									<td data-label={thead[5]}>{el['annual-roi']}</td>
+									<td data-label={thead[6]}>{el.remarks}</td>
+								</>
+							)}
+						</tr>
+					))}
 			</tbody>
 		</table>
 	);

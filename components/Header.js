@@ -6,7 +6,6 @@ import Nav from './Nav';
 
 // styles
 import styles from '../styles/Header.module.scss';
-import Image from 'next/image';
 import { useEffect } from 'react';
 
 const Header = ({ menuState, setMenuState, showOnMobile, whiteMenu }) => {
@@ -14,7 +13,6 @@ const Header = ({ menuState, setMenuState, showOnMobile, whiteMenu }) => {
 
 	useEffect(() => {
 		setMenuState(false);
-		// console.log(menuState);
 	}, [location]);
 
 	return (
@@ -22,7 +20,6 @@ const Header = ({ menuState, setMenuState, showOnMobile, whiteMenu }) => {
 			<div className="container">
 				<nav className={styles.navbar}>
 					<Link href="/">
-						{/* <Image src="/logo.svg" alt="site logo" width={131} height={39} /> */}
 						<div className={styles.logo}>
 							<svg
 								id="logo"

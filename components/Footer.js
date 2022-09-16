@@ -1,7 +1,7 @@
 //styles
 import styles from '../styles/Footer.module.scss';
 
-const Footer = props => {
+const Footer = () => {
 	return (
 		<footer className={`${styles.footer} mt`}>
 			<p className="small">
