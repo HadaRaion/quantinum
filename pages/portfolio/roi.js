@@ -38,7 +38,7 @@ const ROI = () => {
 				imageSrc={bannerImage1}
 				layout="fill"
 				objectFit="cover"
-				title={'Management'}
+				title={t('banner-title')}
 				subtitle={''}
 			/>
 
