@@ -33,7 +33,7 @@ const MobileNav = ({ setMenuState, menuState }) => {
 							initial={{ x: '100vw' }}
 							animate={{ x: '0' }}
 							exit={{ x: '100vw' }}
-							transition={{ duration: 0.3, type: 'tween' }}>
+							transition={{ duration: 0.6, type: 'tween' }}>
 							<div className="container">
 								<div className={styles['nav-top']}>
 									<Link href="/">

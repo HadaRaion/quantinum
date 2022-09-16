@@ -15,22 +15,17 @@ import styles from '../styles/Layout.module.scss';
 
 const pageTransition = {
 	hidden: {
-		opacity: 0,
-		transition: {
-			duration: 0.3,
-		},
+		x: '100vw',
 	},
 	show: {
-		opacity: 1,
-		transition: {
-			duration: 0.3,
-		},
+		x: '0',
 	},
 	exit: {
-		opacity: 0,
-		transition: {
-			duration: 0.3,
-		},
+		x: '-100vw',
+
+		// transition: {
+		// 	duration: 0.3,
+		// },
 	},
 };
 
