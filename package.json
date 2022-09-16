@@ -1,27 +1,27 @@
 {
-  "name": "qi-next",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@emailjs/browser": "^3.7.0",
-    "framer-motion": "^7.3.0",
-    "next": "12.2.5",
-    "next-i18next": "^12.0.1",
-    "react": "18.2.0",
-    "react-countup": "^6.3.1",
-    "react-dom": "18.2.0",
-    "react-lottie": "^1.2.3",
-    "react-responsive": "^9.0.0-beta.10"
-  },
-  "devDependencies": {
-    "eslint": "8.23.0",
-    "eslint-config-next": "12.2.5",
-    "sass": "^1.54.8"
-  }
+	"name": "qi-next",
+	"version": "1.0.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint"
+	},
+	"dependencies": {
+		"@emailjs/browser": "^3.7.0",
+		"framer-motion": "^7.3.0",
+		"next": "12.2.5",
+		"next-i18next": "^12.0.1",
+		"react": "18.2.0",
+		"react-countup": "^6.3.1",
+		"react-dom": "18.2.0",
+		"react-lottie": "^1.2.3",
+		"react-responsive": "^9.0.0-beta.10"
+	},
+	"devDependencies": {
+		"eslint": "8.23.0",
+		"eslint-config-next": "12.2.5",
+		"sass": "^1.54.8"
+	}
 }

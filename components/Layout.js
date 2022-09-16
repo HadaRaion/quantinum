@@ -30,9 +30,6 @@ const pageTransition = {
 			type: 'tween',
 			duration: 0.2,
 		},
-		// transition: {
-		// 	duration: 0.3,
-		// },
 	},
 };
 
@@ -79,22 +76,7 @@ const Layout = ({ children }) => {
 					whiteMenu={router.pathname === '/contact'}
 				/>
 				<MobileNav menuState={menuState} setMenuState={setMenuState} />
-
-				<AnimatePresence
-					exitBeforeEnter
-					initial={false}
-					mode="wait"
-					onExitComplete={() => window.scrollTo(0, 0)}>
-					<motion.main
-						key={router.asPath}
-						variants={pageTransition}
-						initial="hidden"
-						animate="show"
-						exit="exit"
-						className={`${styles.main} ${styles.full}`}>
-						{children}
-					</motion.main>
-				</AnimatePresence>
+				<main className={`${styles.main} ${styles.full}`}>{children}</main>
 			</>
 		);
 	} else {
@@ -107,21 +89,7 @@ const Layout = ({ children }) => {
 				/>
 				<MobileNav menuState={menuState} setMenuState={setMenuState} />
 
-				<AnimatePresence
-					exitBeforeEnter
-					initial={false}
-					mode="wait"
-					onExitComplete={() => window.scrollTo(0, 0)}>
-					<motion.main
-						key={router.asPath}
-						variants={pageTransition}
-						initial="hidden"
-						animate="show"
-						exit="exit"
-						className={styles.main}>
-						{children}
-					</motion.main>
-				</AnimatePresence>
+				<main className={styles.main}>{children}</main>
 
 				<div className="to-top-btn show" onClick={goToTop}>
 					<AnimatePresence>
@@ -136,6 +104,7 @@ const Layout = ({ children }) => {
 						) : null}
 					</AnimatePresence>
 				</div>
+
 				<Footer />
 			</>
 		);
@@ -143,3 +112,21 @@ const Layout = ({ children }) => {
 };
 
 export default Layout;
+
+{
+	/* <AnimatePresence
+	exitBeforeEnter
+	initial={false}
+	mode="wait"
+	onExitComplete={() => window.scrollTo(0, 0)}>
+	<motion.main
+		key={router.asPath}
+		variants={pageTransition}
+		initial="hidden"
+		animate="show"
+		exit="exit"
+		className={styles.main}>
+		{children}
+	</motion.main>
+</AnimatePresence>; */
+}
