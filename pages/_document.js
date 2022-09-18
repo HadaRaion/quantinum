@@ -17,6 +17,10 @@ export default function Document() {
 					href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css"
 				/>
 				<meta name="naver-site-verification" content="1da6ad05738ec54cbbb99e19901b567e8ee45130" />
+				<meta
+					name="google-site-verification"
+					content="_ew7GxHnZcyCLktIoowPPh9BpAGfTeVSu_mHDIXJ5NE"
+				/>
 			</Head>
 			<body>
 				<Main />
