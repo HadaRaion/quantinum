@@ -23,22 +23,22 @@ const Form = () => {
 
 	const sendEmail = e => {
 		e.preventDefault();
-		// setIsPending(true);
+		setIsPending(true);
 
 		console.log('serviceID :>> ', serviceID);
 		console.log('templateID :>> ', templateID);
 		console.log('emailKey :>> ', emailKey);
-		// emailjs.sendForm(serviceID, templateID, form.current, emailKey).then(
-		// 	result => {
-		// 		setIsPending(false);
-		// 		console.log('result :>> ', result);
-		// 		e.target.reset();
-		// 	},
-		// 	error => {
-		// 		setIsPending(false);
-		// 		console.log(error.text);
-		// 	}
-		// );
+		emailjs.sendForm(serviceID, templateID, form.current, emailKey).then(
+			result => {
+				setIsPending(false);
+				console.log('result :>> ', result);
+				e.target.reset();
+			},
+			error => {
+				setIsPending(false);
+				console.log(error.text);
+			}
+		);
 	};
 
 	return (
