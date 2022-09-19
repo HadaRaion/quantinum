@@ -17,22 +17,24 @@ const slideInUp = {
 	visible: { y: 0, opacity: 1, transition: { type: 'spring', bounce: 0.4, duration: 1 } },
 };
 
-const Form = () => {
+const Form = ({ message }) => {
 	const form = useRef();
 	const [isPending, setIsPending] = useState(false);
+	const [showResult, setShowResult] = useState('');
 
 	const sendEmail = e => {
 		e.preventDefault();
 		setIsPending(true);
 
-		console.log('serviceID :>> ', serviceID);
-		console.log('templateID :>> ', templateID);
-		console.log('emailKey :>> ', emailKey);
 		emailjs.sendForm(serviceID, templateID, form.current, emailKey).then(
 			result => {
 				setIsPending(false);
-				console.log('result :>> ', result);
+				result.status === 200 && setShowResult(message);
+
 				e.target.reset();
+				setTimeout(() => {
+					setShowResult('');
+				}, 3000);
 			},
 			error => {
 				setIsPending(false);
@@ -87,6 +89,7 @@ const Form = () => {
 			<motion.button variants={slideInUp} type="submit" value="SEND MESSAGE" className="btn">
 				{isPending ? 'Sending...' : 'SEND MESSAGE'}
 			</motion.button>
+			{showResult ? <div className={styles.message}>{showResult}</div> : ''}
 		</motion.form>
 	);
 };

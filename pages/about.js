@@ -117,7 +117,7 @@ const About = props => {
 
 			<section className={`${styles['about-contact']} container mt`}>
 				<div className={styles['form-wrapper']}>
-					<Form />
+					<Form message={t('msg-after-form-sent', { ns: 'common' })} />
 				</div>
 				<div className={styles['map-wrapper']}>
 					<Map height={573} />

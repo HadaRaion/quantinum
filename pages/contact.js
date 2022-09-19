@@ -41,7 +41,7 @@ const Contact = props => {
 				transition={{ staggerChildren: 0.1 }}
 				className={`mt container ${styles.info}`}>
 				<div className={styles['form-wrapper']}>
-					<Form />
+					<Form message={t('msg-after-form-sent', { ns: 'common' })} />
 				</div>
 				<div className={styles['address-wrapper']}>
 					<motion.h3 variants={slideInUp} className="en">
