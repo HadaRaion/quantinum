@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 
 // styles
 import styles from '../styles/Form.module.scss';
+import { useState } from 'react';
 
 const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
 const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
@@ -18,18 +19,26 @@ const slideInUp = {
 
 const Form = () => {
 	const form = useRef();
+	const [isPending, setIsPending] = useState(false);
 
 	const sendEmail = e => {
 		e.preventDefault();
-		e.target.reset();
-		emailjs.sendForm(serviceID, templateID, form.current, emailKey).then(
-			result => {
-				e.target.reset();
-			},
-			error => {
-				console.log(error.text);
-			}
-		);
+		// setIsPending(true);
+
+		console.log('serviceID :>> ', serviceID);
+		console.log('templateID :>> ', templateID);
+		console.log('emailKey :>> ', emailKey);
+		// emailjs.sendForm(serviceID, templateID, form.current, emailKey).then(
+		// 	result => {
+		// 		setIsPending(false);
+		// 		console.log('result :>> ', result);
+		// 		e.target.reset();
+		// 	},
+		// 	error => {
+		// 		setIsPending(false);
+		// 		console.log(error.text);
+		// 	}
+		// );
 	};
 
 	return (
@@ -53,7 +62,7 @@ const Form = () => {
 				<label>
 					<span className={styles['input-label']}>Your Name</span>
 					<span className={styles['input-wrapper']} data-name="name">
-						<input type="text" name="name" className="" aria-required="true" aria-invalid="false" />
+						<input type="text" name="name" className="" required aria-invalid="false" />
 					</span>
 				</label>
 			</motion.div>
@@ -62,13 +71,7 @@ const Form = () => {
 				<label>
 					<span className={styles['input-label']}>Your eMail</span>
 					<span className={styles['input-wrapper']} data-name="email">
-						<input
-							type="email"
-							name="email"
-							className=""
-							aria-required="true"
-							aria-invalid="false"
-						/>
+						<input type="email" name="email" className="" required aria-invalid="false" />
 					</span>
 				</label>
 			</motion.div>
@@ -77,12 +80,12 @@ const Form = () => {
 				<label>
 					<span className={styles['input-label']}>Message</span>
 					<span className={styles['input-wrapper']} data-name="message">
-						<textarea name="message" cols="40" rows="5" aria-required="true" aria-invalid="false" />
+						<textarea name="message" cols="40" rows="5" required aria-invalid="false" />
 					</span>
 				</label>
 			</motion.div>
 			<motion.button variants={slideInUp} type="submit" value="SEND MESSAGE" className="btn">
-				SEND MESSAGE
+				{isPending ? 'Sending...' : 'SEND MESSAGE'}
 			</motion.button>
 		</motion.form>
 	);
