@@ -25,9 +25,11 @@ const Feature = props => {
 	return (
 		<div className={`${styles.feature} ${router.locale === 'en' ? styles.english : undefined}`}>
 			<Head>
-				<title>Feature - Quantinum Investment</title>
+				<title>{t('title-feature', { ns: 'common' })}</title>
 				<meta name="description" content={t('description', { ns: 'common' })} />
 				<meta name="keywords" content={t('keywords', { ns: 'common' })} />
+				<meta property="og:title" content={t('title-feature', { ns: 'common' })} />
+				<meta property="og:description" content={t('description', { ns: 'common' })} />
 			</Head>
 			<Banner
 				imageSrc={bannerImage1}

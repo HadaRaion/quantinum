@@ -34,9 +34,11 @@ const Portfolio = props => {
 	return (
 		<div className={styles.portfolio}>
 			<Head>
-				<title>Portfolio - Quantinum Investment</title>
+				<title>{t('title-portfolio', { ns: 'common' })}</title>
 				<meta name="description" content={t('description', { ns: 'common' })} />
 				<meta name="keywords" content={t('keywords', { ns: 'common' })} />
+				<meta property="og:title" content={t('title-portfolio', { ns: 'common' })} />
+				<meta property="og:description" content={t('description', { ns: 'common' })} />
 			</Head>
 			<Banner
 				imageSrc={bannerImage}

@@ -23,9 +23,11 @@ const Management = () => {
 	return (
 		<div className={`${styles.management} ${router.locale === 'en' ? styles.english : undefined}`}>
 			<Head>
-				<title>Management - Quantinum Investment</title>
+				<title>{t('title-management', { ns: 'common' })}</title>
 				<meta name="description" content={t('description', { ns: 'common' })} />
 				<meta name="keywords" content={t('keywords', { ns: 'common' })} />
+				<meta property="og:title" content={t('title-management', { ns: 'common' })} />
+				<meta property="og:description" content={t('description', { ns: 'common' })} />
 			</Head>
 			<Banner
 				imageSrc={bannerImage}

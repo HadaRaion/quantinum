@@ -44,9 +44,11 @@ const Homepage = () => {
 	return (
 		<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className={styles.home}>
 			<Head>
-				<title>Quantinum Investment</title>
+				<title>{t('title', { ns: 'common' })}</title>
 				<meta name="description" content={t('description')} />
 				<meta name="keywords" content={t('keywords')} />
+				<meta property="og:title" content={t('title', { ns: 'common' })} />
+				<meta property="og:description" content={t('description', { ns: 'common' })} />
 			</Head>
 
 			<div className={styles['animation-wrapper']}>

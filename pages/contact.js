@@ -25,9 +25,11 @@ const Contact = props => {
 	return (
 		<div className={styles.contact}>
 			<Head>
-				<title>Contact - Quantinum Investment</title>
+				<title>{t('title-contact', { ns: 'common' })}</title>
 				<meta name="description" content={t('description', { ns: 'common' })} />
 				<meta name="keywords" content={t('keywords', { ns: 'common' })} />
+				<meta property="og:title" content={t('title-contact', { ns: 'common' })} />
+				<meta property="og:description" content={t('description', { ns: 'common' })} />
 			</Head>
 
 			<div className={styles.map}>

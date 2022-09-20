@@ -41,9 +41,11 @@ const About = props => {
 	return (
 		<div className={styles.about}>
 			<Head>
-				<title>About - Quantinum Investment</title>
+				<title>{t('title-about', { ns: 'common' })}</title>
 				<meta name="description" content={t('description', { ns: 'common' })} />
 				<meta name="keywords" content={t('keywords', { ns: 'common' })} />
+				<meta property="og:title" content={t('title-about', { ns: 'common' })} />
+				<meta property="og:description" content={t('description', { ns: 'common' })} />
 			</Head>
 			<Banner
 				imageSrc={bannerImage}

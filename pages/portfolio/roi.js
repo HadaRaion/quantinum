@@ -30,9 +30,11 @@ const ROI = () => {
 	return (
 		<div className={`${styles.roi} ${router.locale === 'en' ? styles.en : undefined}`}>
 			<Head>
-				<title>Management - Quantinum Investment</title>
+				<title>{t('title-roi', { ns: 'common' })}</title>
 				<meta name="description" content={t('description', { ns: 'common' })} />
 				<meta name="keywords" content={t('keywords', { ns: 'common' })} />
+				<meta property="og:title" content={t('title-roi', { ns: 'common' })} />
+				<meta property="og:description" content={t('description', { ns: 'common' })} />
 			</Head>
 			<Banner
 				imageSrc={bannerImage1}
